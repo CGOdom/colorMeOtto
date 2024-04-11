@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D3 Shape Example</title>
+<style>
+/* Add styles for the SVG background and the elements */
+svg {
+  background-color: black; /* Set the background color of the SVG */
+}
+
+  /* Make the entire browser window black */
+  body {
+    margin: 0; /* Remove default margin */
+    background-color: black; /* Set the background color of the body */
+    display: flex; /* Use flexbox to center the content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+  }
+
+
+
+  .triangle, .triangle2 {
+    fill: none; /* Clear fill for triangles */
+  }
+
+  .segment {
+    fill: none; /* Clear fill for segments */
+    stroke: white; /* White stroke for segments */
+  }
+</style>
+
+<script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+<svg></svg>
+
+<script>
+// Set up the SVG container to fill the browser window with padding
+var padding = 50; // Amount of padding around the SVG content
+var svg = d3.select("svg"),
+    width = window.innerWidth - 2 * padding, // Subtract padding from both sides
+    height = window.innerHeight - 2 * padding, // Subtract padding from top and bottom
+    radius = Math.min(width, height) / 2;
+
+svg.attr("width", window.innerWidth)
+   .attr("height", window.innerHeight)
+   .style("background-color", "black"); // Ensuring the SVG background is still black
+
+// Update the group transform to center based on the new dimensions, considering padding
+var g = svg.append("g")
+           .attr("transform", "translate(" + (padding + width / 2) + "," + (padding + height / 2) + ")");
+
+           
+// Proceed with your D3 drawing code as before
+/*
+// Set up the SVG container
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height"),
+    radius = Math.min(width, height) / 2;
+
+// Create group element to hold the circle and the segments
+var g = svg.append("g")
+           .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+*/
+
+// Define the arc generator for the ring segments
+var arc = d3.arc()
+            .innerRadius(radius * 0.2)
+            .outerRadius(radius * .5);
+
+ 
+ // Define the rotation animation for the triangle
+function rotateTriangle() {
+  g.select(".triangle")
+   .transition()
+   .duration(8000*Math.random() + 5000) // duration of animation in milliseconds
+   .ease(d3.easeCubic) // Apply easing
+   .attrTween("transform", function() {
+     return d3.interpolateString("rotate(0)", "rotate(360)");
+   })
+   .on("end", rotateTriangle); // Loop the animation
+}
+
+function rotateTriangle2() {
+  g.select(".triangle2")
+   .transition()
+   .duration(8000*Math.random() + 5000) // duration of animation in milliseconds
+   .ease(d3.easeCubic) // Apply easing
+   .attrTween("transform", function() {
+     return d3.interpolateString("rotate(0)", "rotate(-360)");
+   })
+   .on("end", rotateTriangle2); // Loop the animation
+}
+
+// Draw the encompassing triangle and start the rotation
+g.append("path")
+ .attr("class", "triangle")
+ .attr("d", "M0," + (-radius) + " L" + (-radius * Math.sin(Math.PI / 3)) + "," + (radius / 2) + " L" + (radius * Math.sin(Math.PI / 3)) + "," + (radius / 2) + "Z")
+ .attr("fill", "none")
+ .attr("stroke", "#f0f0f0")
+ .style('stroke-width', '7px')
+ .call(rotateTriangle); // Start the rotation
+ 
+ // Draw the encompassing triangle and start the rotation
+g.append("path")
+ .attr("class", "triangle2")
+ .attr("d", "M0," + (-radius) + " L" + (-radius * Math.sin(Math.PI / 3)) + "," + (radius / 2) + " L" + (radius * Math.sin(Math.PI / 3)) + "," + (radius / 2) + "Z")
+ .attr("fill", "none")
+ .attr("stroke", "#f0f0f0")
+ .style('stroke-width', '7px')
+ .call(rotateTriangle2); // Start the rotation
+
+// Function to randomly return either 1 or -1
+function randomSign() {
+  return Math.random() < 0.5 ? -1 : 1;
+}
+
+// Define the rotation animation for the segments
+// Create the ring segments
+var segments = 8; // number of segments in the ring
+function rotateSegments() {
+  g.selectAll(".segment")
+   .transition()
+   .duration(8000*Math.random() + 5000) // duration of animation in milliseconds
+   .ease(d3.easeCubic) // Apply easing
+   .attrTween("transform", function() {
+     return d3.interpolateString("rotate(0)", "rotate("+ 360 * randomSign() +")");
+   })
+   .on("end", rotateSegments); // Loop the animation
+}
+
+// Create the ring segments and start the counter rotation
+for (var i = 0; i < segments; i++) {
+  g.append("path")
+   .attr("class", "segment")
+   .attr("d", arc.startAngle((Math.PI * 2 / segments) * i)
+                .endAngle((Math.PI * 2 / segments) * (i + 1)))
+   .attr("fill", i % 2 == 0 ? "none" : "none")
+   .attr("stroke", "white")
+   .style('stroke-width', '7px')
+   .attr("transform", "rotate(" + (i * 360 / segments) + ")")
+   .call(rotateSegments); // Start the counter rotation
+}
+
+</script>
+</body>
+</html>
