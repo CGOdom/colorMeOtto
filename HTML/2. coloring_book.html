@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coloring Book</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Image Carousel</title>
+<style>
+  /* Center the container */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  /* Center the dropdown menu */
+  .dropdown {
+    margin-top: 20px;
+  }
+
+  /* Center the button */
+  .button {
+    margin-top: 20px;
+  }
+</style>
 </head>
 <body>
-    <h1>Coloring page</h1>
+
+<div class="container">
+  <h1>3D Image Carousel</h1>
+  <!-- 3D Image Carousel -->
+  <div class="carousel">
+    <!-- Add your 3D image carousel here -->
+    <!-- Example: -->
+    <div>Image 1</div>
+    <div>Image 2</div>
+    <div>Image 3</div>
+  </div>
+    <h1>
+        How much for your soul?
+    </h1>
+  <!-- Dropdown menu -->
+  <div class="dropdown">
+    <select>
+      <option value="option0" disabled selected>What is it you seek?</option>
+      <option value="option1">Money</option>
+      <option value="option2">A "colorMeOtto" Coloring Book</option>
+      <option value="option3">Soul for a Soul</option>
+    </select>
+  </div>
+
+  <!-- Button to navigate to a different page -->
+  <div class="button">
+    <button onclick="navigate()">Navigate to Soul Contract</button>
+  </div>
+</div>
+
+<script>
+  // Function to navigate to a different page
+  function navigate() {
+    // Replace "page2.html" with the path to the desired HTML page
+    window.location.href = "C:\Users\Caden Odom\Desktop\colorMeOtto\colorMeOtto\soul_contract.html";
+  }
+  
+</script>
+
 </body>
 </html>
