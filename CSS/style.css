@@ -27,4 +27,22 @@ svg {
     opacity: 1; /* Make the image visible on hover */
   }
 
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Styling the navigation links */
+  nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  /* Styling the active link */
+  nav a.active {
+    font-weight: bold;
+    color: blue;
+  }
+
   
