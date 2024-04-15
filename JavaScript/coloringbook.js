@@ -1,4 +1,3 @@
-<script>
   // Function to create a random star
   function createStar() {
     const star = document.createElement('div');
@@ -29,4 +28,3 @@
       $('#carouselExample').carousel('next');
     });
   });
-</script>
