@@ -170,3 +170,17 @@ svg {
     height: 400px; /* Desired height */
     object-fit: cover; /* Cover the container, cropping as needed */
 }
+
+/* Rainbow effect */
+.rainbow-text {
+    background: linear-gradient(45deg, #ff0000, #ff7700, #ffdd00, #33ff00, #0077ff, #3300ff, #7700ff);
+    background-size: 400%;
+    animation: rainbow-animation 10s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes rainbow-animation {
+    0% { background-position: 0 50%; }
+    100% { background-position: 100% 50%; }
+  }
