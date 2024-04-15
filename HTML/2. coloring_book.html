@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+<link rel="stylesheet" type="text/css" href="../CSS/style.css">
 <title>ColorMeOtto</title>
 <!-- Bootstrap CSS -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -69,39 +69,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- JavaScript for twinkling stars -->
-<script>
-  // Function to create a random star
-  function createStar() {
-    const star = document.createElement('div');
-    star.className = 'star';
-    star.style.width = `${Math.random() * 2 + 1}px`; // Random width between 1px and 3px
-    star.style.height = star.style.width; // Make the star a perfect circle
-    star.style.left = `${Math.random() * window.innerWidth}px`; // Random horizontal position
-    star.style.top = `${Math.random() * window.innerHeight}px`; // Random vertical position
-    document.body.appendChild(star);
-  }
-
-  // Create stars at random intervals
-  setInterval(createStar, 50); // Adjust interval for more or fewer stars
-
-  // Manual carousel navigation
-  $(document).ready(function(){
-    $('#carouselExample').carousel({
-      interval: false // Disable automatic cycling
-    });
-
-    // Navigate to previous slide
-    $('.carousel-control-prev').click(function(){
-      $('#carouselExample').carousel('prev');
-    });
-
-    // Navigate to next slide
-    $('.carousel-control-next').click(function(){
-      $('#carouselExample').carousel('next');
-    });
-  });
-</script>
-
+<script src="../JavaScript\coloringbook.js"></script>
 </body>
 </html>

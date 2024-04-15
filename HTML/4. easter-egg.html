@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+<link rel="stylesheet" type="text/css" href="../CSS/style.css">
 <title>Easter-Egg</title>
 </head>
 <body>
@@ -14,26 +14,9 @@
     <a href="../HTML\4. easter-egg.html" class="active">Easter-Egg</a>
   </nav>
 
-<!-- JavaScript to create twinkling stars -->
-<script>
-  // Function to create a random star
-  function createStar() {
-    const star = document.createElement('div');
-    star.className = 'star';
-    star.style.width = `${Math.random() * 2 + 1}px`; // Random width between 1px and 3px
-    star.style.height = star.style.width; // Make the star a perfect circle
-    star.style.left = `${Math.random() * window.innerWidth}px`; // Random horizontal position
-    star.style.top = `${Math.random() * window.innerHeight}px`; // Random vertical position
-    document.body.appendChild(star);
-  }
-
-  // Create stars at random intervals
-  setInterval(createStar, 50); // Adjust interval for more or fewer stars
-</script>
-
 <!-- Your content goes here -->
 <h1>Easter-egg</h1>
 <p></p>
-
+<script src="../JavaScript\coloringbook.js"></script>
 </body>
 </html>
