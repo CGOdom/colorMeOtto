@@ -6,7 +6,7 @@ svg {
   /* Make the entire browser window black */
   body {
     margin: 0; /* Remove default margin */
-    background-color: black; /* Set the background color of the body */
+    background-color: black !important; /* Set the background color of the body */
     display: flex; /* Use flexbox to center the content */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
