@@ -106,7 +106,7 @@ clickableSpaces.append("a")
  .attr("xlink:href", "4. easter-egg.html")
  .append("image") // Use image element instead of circle
  .attr("class", "image")
- .attr("xlink:href", "../Images\Uranus.png") // Replace "image0.jpg" with the path to your image
+ .attr("xlink:href", "../Images/Uranus.png") // Replace "image0.jpg" with the path to your image
  .attr("x", x0 - 10) // Adjust position if needed
  .attr("y", y0 - 10) // Adjust position if needed
  .attr("width", 20)
@@ -124,7 +124,7 @@ clickableSpaces.append("a")
  .attr("xlink:href", "3. soul_contract.html")
  .append("image") // Use image element instead of circle
  .attr("class", "image")
- .attr("xlink:href", "../Images\Jupiter.png") // Replace "image0.jpg" with the path to your image
+ .attr("xlink:href", "../Images/Jupiter.png") // Replace "image0.jpg" with the path to your image
  .attr("x", x1 - 10) // Adjust position if needed
  .attr("y", y1 - 10) // Adjust position if needed
  .attr("width", 20)
@@ -135,7 +135,7 @@ clickableSpaces.append("a")
  .attr("xlink:href", "2. coloring_book.html")
  .append("image") // Use image element instead of circle
  .attr("class", "image")
- .attr("xlink:href", "../Images\Earth.png") // Replace "image0.jpg" with the path to your image
+ .attr("xlink:href", "../Images/Earth.png") // Replace "image0.jpg" with the path to your image
  .attr("x", x2 - 10) // Adjust position if needed
  .attr("y", y2 - 10) // Adjust position if needed
  .attr("width", 20)
