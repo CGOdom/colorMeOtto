@@ -3,66 +3,222 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3D Image Carousel</title>
+<title>ColorMeOtto</title>
+<!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <style>
-  /* Center the container */
-  .container {
+  /* Set background color to black */
+  body {
+    background-color: black;
+    color: white; /* Set text color to white */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    position: relative; /* Required for absolute positioning of UFO */
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
   }
 
-  /* Center the dropdown menu */
-  .dropdown {
-    margin-top: 20px;
+  /* Style for the stars */
+  .star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none; /* Make stars non-clickable */
+    animation: twinkling 0.5s infinite; /* Apply the twinkling animation */
   }
 
-  /* Center the button */
-  .button {
-    margin-top: 20px;
+  /* Animation for twinkling effect */
+  @keyframes twinkling {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Set text color for dropdown menu */
+  select.form-select {
+    color: black;
+  }
+
+  /* Set text color for carousel captions */
+  .carousel-caption {
+    color: white;
+  }
+
+  /* Adjust size of carousel control buttons */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 20%; /* Reduce width by 60% */
+  }
+
+  /* Center dropdown menu */
+  .dropdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  /* Cool effect for header text */
+  .cool-effect {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.063); /* Add electric glowing effect */
+    font-family: 'Arial Rounded MT Bold', sans-serif; /* Apply rounded font */
+    letter-spacing: 2px; /* Adjust letter spacing */
+    position: relative; /* Required for animation */
+    animation: colorMovement 5s infinite alternate; /* Apply animation to color movement */
+    color: transparent;
+  }
+
+  /* Keyframes for color movement */
+  @keyframes colorMovement {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+/* Apply gradient background to text */
+.cool-effect::before {
+  content: attr(data-text); /* Set content to original text */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Move background behind text */
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, red, yellow, green, blue, violet); /* Gradient colors */
+  background-size: 400% 400%; /* Increase size to animate */
+  -webkit-background-clip: text; /* Clip background to text (for WebKit browsers) */
+  background-clip: text; /* Clip background to text (standard) */
+  -webkit-text-fill-color: transparent; /* Hide original text */
+  animation: colorMovement 5s infinite alternate; /* Apply animation to color movement */
+}
+
+
+  /* UFO effect */
+  .cool-effect::after {
+    content: '';
+    position: absolute;
+    top: 25%; /* Adjust initial position */
+    left: 25%; /* Adjust initial position */
+    width: 100px; /* Adjust UFO width */
+    height: 50px; /* Adjust UFO height */
+    border-radius: 50%;
+    background: radial-gradient(rgba(255, 255, 255, 0.7), transparent); /* Create UFO shape */
+    animation: ufo 15s infinite linear; /* Add UFO animation */
+  }
+
+  @keyframes ufo {
+    0% {
+      transform: translate(-50%, -50%) translateX(0px) translateY(0px); /* Initial position */
+    }
+    25% {
+      transform: translate(-50%, -50%) translateX(calc(100vw - 100px)) translateY(calc(100vh - 50px)); /* Move to bottom right */
+    }
+    50% {
+      transform: translate(-50%, -50%) translateX(0px) translateY(calc(100vh - 50px)); /* Move to bottom left */
+    }
+    75% {
+      transform: translate(-50%, -50%) translateX(calc(-100vw + 100px)) translateY(calc(-100vh + 50px)); /* Move to top left */
+    }
+    100% {
+      transform: translate(-50%, -50%) translateX(0px) translateY(0px); /* Move back to initial position */
+    }
   }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <h1>3D Image Carousel</h1>
-  <!-- 3D Image Carousel -->
-  <div class="carousel">
-    <!-- Add your 3D image carousel here -->
-    <!-- Example: -->
-    <div>Image 1</div>
-    <div>Image 2</div>
-    <div>Image 3</div>
-  </div>
-    <h1>
-        How much for your soul?
-    </h1>
-  <!-- Dropdown menu -->
-  <div class="dropdown">
-    <select>
-      <option value="option0" disabled selected>What is it you seek?</option>
-      <option value="option1">Money</option>
-      <option value="option2">A "colorMeOtto" Coloring Book</option>
-      <option value="option3">Soul for a Soul</option>
-    </select>
-  </div>
+<!-- Your header -->
+<h1 class="mb-3 cool-effect" data-text="colorMeOtto">colorMeOtto</h1>
 
-  <!-- Button to navigate to a different page -->
-  <div class="button">
-    <button onclick="navigate()">Navigate to Soul Contract</button>
+<!-- Space between header and carousel -->
+<div style="flex-grow: 0.2;"></div>
+
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://via.placeholder.com/800x400?text=First+Slide" class="d-block w-100" alt="First Slide">
+    </div>
+    <div class="carousel-item">
+      <img src="https://via.placeholder.com/800x400?text=Second+Slide" class="d-block w-100" alt="Second Slide">
+    </div>
+    <div class="carousel-item">
+      <img src="https://via.placeholder.com/800x400?text=Third+Slide" class="d-block w-100" alt="Third Slide">
+    </div>
   </div>
+  <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 
-<script>
-  // Function to navigate to a different page
-  function navigate() {
-    // Replace "page2.html" with the path to the desired HTML page
-    window.location.href = "C:\Users\Caden Odom\Desktop\colorMeOtto\colorMeOtto\soul_contract.html";
-  }
+<!-- Space between carousel and dropdown menu -->
+<div style="flex-grow: 0.2;"></div>
+
+<!-- Your dropdown menu and button -->
+<div class="dropdown-container mb-3">
+  <h3>How much for your soul?</h3>
   
+  <select class="form-select mb-3" aria-label="Select option">
+    <option selected disabled>What do you seek?</option>
+    <option value="money">Money</option>
+    <option value="coloring_book">A colorMeOtto coloring book</option>
+    <option value="soul_for_soul">Soul for a soul</option>
+  </select>
+  <button type="button" class="btn btn-primary">Navigate to Soul Contract</button>
+</div>
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript for twinkling stars -->
+<script>
+  // Function to create a random star
+  function createStar() {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.width = `${Math.random() * 2 + 1}px`; // Random width between 1px and 3px
+    star.style.height = star.style.width; // Make the star a perfect circle
+    star.style.left = `${Math.random() * window.innerWidth}px`; // Random horizontal position
+    star.style.top = `${Math.random() * window.innerHeight}px`; // Random vertical position
+    document.body.appendChild(star);
+  }
+
+  // Create stars at random intervals
+  setInterval(createStar, 50); // Adjust interval for more or fewer stars
+
+  // Manual carousel navigation
+  $(document).ready(function(){
+    $('#carouselExample').carousel({
+      interval: false // Disable automatic cycling
+    });
+
+    // Navigate to previous slide
+    $('.carousel-control-prev').click(function(){
+      $('#carouselExample').carousel('prev');
+    });
+
+    // Navigate to next slide
+    $('.carousel-control-next').click(function(){
+      $('#carouselExample').carousel('next');
+    });
+  });
 </script>
 
 </body>
