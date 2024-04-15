@@ -164,3 +164,9 @@ svg {
       transform: translate(-50%, -50%) translateX(0px) translateY(0px); /* Move back to initial position */
     }
   }
+
+  .cropped-image {
+    width: 800px;  /* Desired width */
+    height: 400px; /* Desired height */
+    object-fit: cover; /* Cover the container, cropping as needed */
+}
