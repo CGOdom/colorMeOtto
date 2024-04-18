@@ -1,4 +1,4 @@
-// Set up the SVG container to fill the browser window with padding
+  // Set up the SVG container to fill the browser window with padding
 var padding = 50; // Amount of padding around the SVG content
 var svg = d3.select("svg"),
     width = window.innerWidth - 2 * padding, // Subtract padding from both sides
@@ -145,13 +145,13 @@ clickableSpaces.append("a")
 // Define the rotation animation for the clickable spaces
 function rotateClickableSpaces() {
   clickableSpaces.transition()
-    .duration(3456) // duration of rotation in milliseconds
+    .duration(3500) // duration of rotation in milliseconds
     .ease(d3.easeLinear) // Apply linear easing
     .attrTween("transform", function() {
       return d3.interpolateString("rotate(0)", "rotate(360)");
     })
     .transition()
-    .delay(9876) // delay before reversing rotation
+    .delay(10000) // delay before reversing rotation
     .duration(8000) // duration of pause in milliseconds
     .ease(d3.easeLinear) // Apply linear easing
     .attrTween("transform", function() {
