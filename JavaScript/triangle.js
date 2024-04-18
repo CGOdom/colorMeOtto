@@ -92,12 +92,16 @@ for (var i = 0; i < segments; i++) {
 }
 
 // Create and position only three clickable spaces between pairs of segments
-var x0 = (radius * 0.35) * Math.cos((Math.PI * 2 / segments) * 0.5);
-var y0 = (radius * 0.35) * Math.sin((Math.PI * 2 / segments) * 0.5);
-var x1 = (radius * 0.35) * Math.cos((Math.PI * 2 / segments) * 2.5);
-var y1 = (radius * 0.35) * Math.sin((Math.PI * 2 / segments) * 2.5);
-var x2 = (radius * 0.35) * Math.cos((Math.PI * 2 / segments) * 4.5);
-var y2 = (radius * 0.35) * Math.sin((Math.PI * 2 / segments) * 4.5);
+function calcPosition(radius, trigOp, segments, c) {
+  return (radius * 0.35) * trigOp((Math.PI * 2 / segments) * c);
+}
+
+let x0 = calcPosition(radius, Math.cos, segments, 0.5);
+let y0 = calcPosition(radius, Math.sin, segments, 0.5);
+let x1 = calcPosition(radius, Math.cos, segments, 2.5);
+let y1 = calcPosition(radius, Math.sin, segments, 2.5);
+let x2 = calcPosition(radius, Math.cos, segments, 4.5);
+let y2 = calcPosition(radius, Math.sin, segments, 4.5);
 
 // Create a group to contain the clickable spaces
 var clickableSpaces = g.append("g");
