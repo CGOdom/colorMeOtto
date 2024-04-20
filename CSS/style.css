@@ -35,33 +35,30 @@ svg {
   }
 
   nav {
-    display: flex;
-    justify-content: center;
-  }
+    display: flex !important;
+    justify-content: center !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background-color: #000000 !important;
+    padding: 13px 0 !important;
+}
 
-  /* Styling the navigation links */
-  nav a {
-    padding: 10px 20px;
-    color: #fffefe; /* Default link color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth transition effect for color change */
-    font-size: large;
-    font-weight: bold;
-  }
-  
-  /* CSS for hover effect */
-  .navbar a:hover {
-    color: rgb(226, 208, 103); /* Change link color on hover */
-    text-decoration: none;
-  }
+nav a {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: large !important;
+    margin: 0 10px !important;
+}
 
-  /* Styling the active link */
-  nav a.active {
-    font-weight: bold;
-    font-size: large;
-    color: rgb(226, 208, 103);
-    text-decoration: none;
-  }
+nav a.active {
+    font-weight: bold !important;
+    color: rgb(255, 197, 62) !important;
+}
+
+
 
   /* Style for the stars */
   .star {
