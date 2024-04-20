@@ -40,14 +40,25 @@ svg {
   /* Styling the navigation links */
   nav a {
     padding: 10px 20px;
+    color: #fffefe; /* Default link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition effect for color change */
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  /* CSS for hover effect */
+  .navbar a:hover {
+    color: rgb(226, 208, 103); /* Change link color on hover */
     text-decoration: none;
-    color: white;
   }
 
   /* Styling the active link */
   nav a.active {
     font-weight: bold;
-    color: blue;
+    font-size: large;
+    color: rgb(226, 208, 103);
+    text-decoration: none;
   }
 
   /* Style for the stars */
@@ -176,7 +187,7 @@ svg {
     background: linear-gradient(45deg, #ff0000, #ff7700, #ffdd00, #33ff00, #0077ff, #3300ff, #7700ff);
     background-size: 400%;
     animation: rainbow-animation 10s linear infinite;
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   
