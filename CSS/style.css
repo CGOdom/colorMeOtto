@@ -43,22 +43,20 @@ svg {
     width: 100% !important;
     background-color: #000000 !important;
     padding: 13px 0 !important;
-}
+  }
 
-nav a {
-    color: white !important;
-    text-decoration: none !important;
-    font-weight: bold !important;
-    font-size: large !important;
-    margin: 0 10px !important;
-}
+  nav a {
+      color: white !important;
+      text-decoration: none !important;
+      font-weight: bold !important;
+      font-size: large !important;
+      margin: 0 10px !important;
+  }
 
-nav a.active {
-    font-weight: bold !important;
-    color: rgb(255, 197, 62) !important;
-}
-
-
+  nav a.active {
+      font-weight: bold !important;
+      color: rgb(255, 197, 62) !important;
+  }
 
   /* Style for the stars */
   .star {
