@@ -45,6 +45,7 @@ body {
   width: 100%;
   background-color: transparent;
   padding: 13px 0;
+  z-index: 10;
 }
 
 #mynav a {
