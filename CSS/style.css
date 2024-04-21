@@ -41,7 +41,7 @@ svg {
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    background-color: #000000 !important;
+    background-color: transparent !important;
     padding: 13px 0 !important;
   }
 
