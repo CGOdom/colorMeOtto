@@ -1,128 +1,137 @@
 /* Add styles for the SVG background and the elements */
 svg {
-    background-color: black; /* Set the background color of the SVG */
-  }
-  
-  /* Make the entire browser window black */
-  body {
-    margin: 0; /* Remove default margin */
-    background-color: black !important; /* Set the background color of the body */
-    display: flex; /* Use flexbox to center the content */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    height: 100vh; /* Full viewport height */
-    color: white; /* Set text color to white */
-    flex-direction: column;
-    min-height: 100vh;
-    position: relative; /* Required for absolute positioning of UFO */
-    overflow-y: auto;
-    overflow-x: auto;
-    min-width: 768px;
-  }
-  
-  .triangle, .triangle2 {
-    fill: none; /* Clear fill for triangles */
-  }
-  
-  .segment {
-    fill: none; /* Clear fill for segments */
-    stroke: white; /* White stroke for segments */
-  }
-  
-  /* Hover effect */
-  .clickable-space:hover .image {
-    opacity: 1; /* Make the image visible on hover */
-  }
+  background-color: black; /* Set the background color of the SVG */
+}
 
-  nav {
-    display: flex !important;
-    justify-content: center !important;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    background-color: transparent !important;
-    padding: 13px 0 !important;
-  }
+/* Make the entire browser window black */
+body {
+  margin: 0; /* Remove default margin */
+  background-color: black !important; /* Set the background color of the body */
+  display: flex; /* Use flexbox to center the content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh; /* Full viewport height */
+  color: white; /* Set text color to white */
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative; /* Required for absolute positioning of UFO */
+  overflow-y: auto;
+  overflow-x: auto;
+  min-width: 768px;
+  height: 100%;
+}
 
-  nav a {
-      color: white !important;
-      text-decoration: none !important;
-      font-weight: bold !important;
-      font-size: large !important;
-      margin: 0 10px !important;
-  }
+.triangle,
+.triangle2 {
+  fill: none; /* Clear fill for triangles */
+}
 
-  nav a.active {
-      font-weight: bold !important;
-      color: rgb(255, 197, 62) !important;
-  }
+.segment {
+  fill: none; /* Clear fill for segments */
+  stroke: white; /* White stroke for segments */
+}
 
-  /* Style for the stars */
-  .star {
-    position: absolute;
-    background-color: white;
-    border-radius: 50%;
-    pointer-events: none; /* Make stars non-clickable */
-    animation: twinkling 0.5s infinite; /* Apply the twinkling animation */
-  }
+/* Hover effect */
+.clickable-space:hover .js-img {
+  opacity: 1; /* Make the image visible on hover */
+}
 
-  /* Animation for twinkling effect */
-  @keyframes twinkling {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+#mynav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 13px 0;
+}
 
-  /* Set text color for dropdown menu */
-  select.form-select {
-    color: black;
-  }
+#mynav a {
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  margin: 0 10px;
+}
 
-  /* Set text color for carousel captions */
-  .carousel-caption {
-    color: white;
-  }
+#mynav a:hover {
+  text-decoration: underline;
+}
 
-  /* Adjust size of carousel control buttons */
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 20%; /* Reduce width by 60% */
-  }
+#mynav a.active {
+  font-weight: bold;
+  color: rgb(255, 197, 62);
+}
 
-  /* Center dropdown menu */
-  .dropdown-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
 
-  /* Cool effect for header text */
-  .cool-effect {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.063); /* Add electric glowing effect */
-    font-family: 'Arial Rounded MT Bold', sans-serif; /* Apply rounded font */
-    letter-spacing: 2px; /* Adjust letter spacing */
-    position: relative; /* Required for animation */
-    animation: colorMovement 5s infinite alternate; /* Apply animation to color movement */
-    color: transparent;
-  }
+/* Style for the stars */
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none; /* Make stars non-clickable */
+  animation: twinkling 0.5s infinite; /* Apply the twinkling animation */
+}
 
-  /* Keyframes for color movement */
-  @keyframes colorMovement {
-    0% {
-      background-position: 0% 0%;
-    }
-    100% {
-      background-position: 100% 100%;
-    }
+/* Animation for twinkling effect */
+@keyframes twinkling {
+  0% {
+    opacity: 1;
   }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Set text color for dropdown menu */
+select.form-select {
+  color: black;
+}
+
+/* Set text color for carousel captions */
+.carousel-caption {
+  color: white;
+}
+
+/* Adjust size of carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 20%; /* Reduce width by 60% */
+}
+
+/* Center dropdown menu */
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Cool effect for header text */
+.cool-effect {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.063); /* Add electric glowing effect */
+  font-family: "Arial Rounded MT Bold", sans-serif; /* Apply rounded font */
+  letter-spacing: 2px; /* Adjust letter spacing */
+  position: relative; /* Required for animation */
+  animation: colorMovement 5s infinite alternate; /* Apply animation to color movement */
+  color: transparent;
+}
+
+/* Keyframes for color movement */
+@keyframes colorMovement {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
 
 /* Apply gradient background to text */
 .cool-effect::before {
@@ -133,7 +142,14 @@ svg {
   z-index: -1; /* Move background behind text */
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(45deg, red, yellow, green, blue, violet); /* Gradient colors */
+  background-image: linear-gradient(
+    45deg,
+    red,
+    yellow,
+    green,
+    blue,
+    violet
+  ); /* Gradient colors */
   background-size: 400% 400%; /* Increase size to animate */
   -webkit-background-clip: text; /* Clip background to text (for WebKit browsers) */
   background-clip: text; /* Clip background to text (standard) */
@@ -141,54 +157,100 @@ svg {
   animation: colorMovement 5s infinite alternate; /* Apply animation to color movement */
 }
 
+/* UFO effect */
+.cool-effect::after {
+  content: "";
+  position: absolute;
+  top: 25%; /* Adjust initial position */
+  left: 25%; /* Adjust initial position */
+  width: 100px; /* Adjust UFO width */
+  height: 50px; /* Adjust UFO height */
+  border-radius: 50%;
+  background: radial-gradient(
+    rgba(255, 255, 255, 0.7),
+    transparent
+  ); /* Create UFO shape */
+  animation: ufo 15s infinite linear; /* Add UFO animation */
+}
 
-  /* UFO effect */
-  .cool-effect::after {
-    content: '';
-    position: absolute;
-    top: 25%; /* Adjust initial position */
-    left: 25%; /* Adjust initial position */
-    width: 100px; /* Adjust UFO width */
-    height: 50px; /* Adjust UFO height */
-    border-radius: 50%;
-    background: radial-gradient(rgba(255, 255, 255, 0.7), transparent); /* Create UFO shape */
-    animation: ufo 15s infinite linear; /* Add UFO animation */
+@keyframes ufo {
+  0% {
+    transform: translate(-50%, -50%) translateX(0px) translateY(0px); /* Initial position */
   }
-
-  @keyframes ufo {
-    0% {
-      transform: translate(-50%, -50%) translateX(0px) translateY(0px); /* Initial position */
-    }
-    25% {
-      transform: translate(-50%, -50%) translateX(calc(100vw - 100px)) translateY(calc(100vh - 50px)); /* Move to bottom right */
-    }
-    50% {
-      transform: translate(-50%, -50%) translateX(0px) translateY(calc(100vh - 50px)); /* Move to bottom left */
-    }
-    75% {
-      transform: translate(-50%, -50%) translateX(calc(-100vw + 100px)) translateY(calc(-100vh + 50px)); /* Move to top left */
-    }
-    100% {
-      transform: translate(-50%, -50%) translateX(0px) translateY(0px); /* Move back to initial position */
-    }
+  25% {
+    transform: translate(-50%, -50%) translateX(calc(100vw - 100px))
+      translateY(calc(100vh - 50px)); /* Move to bottom right */
   }
+  50% {
+    transform: translate(-50%, -50%) translateX(0px)
+      translateY(calc(100vh - 50px)); /* Move to bottom left */
+  }
+  75% {
+    transform: translate(-50%, -50%) translateX(calc(-100vw + 100px))
+      translateY(calc(-100vh + 50px)); /* Move to top left */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(0px) translateY(0px); /* Move back to initial position */
+  }
+}
 
-  .cropped-image {
-    width: 800px;  /* Desired width */
-    height: 400px; /* Desired height */
-    object-fit: cover; /* Cover the container, cropping as needed */
+.cropped-image {
+  width: 800px; /* Desired width */
+  height: 600px; /* Desired height */
+  object-fit: scale-down; /* Cover the container, cropping as needed */
 }
 
 /* Rainbow effect */
 .rainbow-text {
-    background: linear-gradient(45deg, #ff0000, #ff7700, #ffdd00, #33ff00, #0077ff, #3300ff, #7700ff);
-    background-size: 400%;
-    animation: rainbow-animation 10s linear infinite;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7700,
+    #ffdd00,
+    #33ff00,
+    #0077ff,
+    #3300ff,
+    #7700ff
+  );
+  background-size: 400%;
+  animation: rainbow-animation 10s linear infinite;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes rainbow-animation {
+  0% {
+    background-position: 0 50%;
   }
-  
-  @keyframes rainbow-animation {
-    0% { background-position: 0 50%; }
-    100% { background-position: 100% 50%; }
+  100% {
+    background-position: 100% 50%;
   }
+}
+
+/* Add custom styles for better spacing and appearance */
+
+/* Add spacing around form elements */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Style the submit button */
+.btn-primary {
+  background-color: #007bff; /* Blue color */
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #0056b3;
+}
+
+footer h1 {
+  font-size: medium;
+  color: white;
+}
+
+footer a,
+footer a:hover {
+  color: rgb(255, 197, 62);
+}
