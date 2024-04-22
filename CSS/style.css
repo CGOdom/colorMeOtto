@@ -315,3 +315,12 @@ footer a:hover {
   font-size: xxx-large;
   color:rgb(255, 197, 62);
 }
+
+.mb-4 {
+  margin-bottom: 60px; /* Adjust margin as needed */
+}
+
+.title-box {
+  background-color: transparent;
+  padding: 20px;
+}
