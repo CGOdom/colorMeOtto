@@ -257,3 +257,4 @@ clickableSpaces
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
+  

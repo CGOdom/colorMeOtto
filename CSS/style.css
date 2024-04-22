@@ -228,24 +228,6 @@ select.form-select {
   }
 }
 
-/* Add custom styles for better spacing and appearance */
-
-/* Add spacing around form elements */
-.form-group {
-  margin-bottom: 20px;
-}
-
-/* Style the submit button */
-.btn-primary {
-  background-color: #309d24; /* Blue color */
-  border-color: #37d61797;
-}
-
-.btn-primary:hover {
-  background-color: #126a0f; /* Darker blue on hover */
-  border-color: #0d5810;
-}
-
 footer h1 {
   font-size: medium;
   color: white;
@@ -254,4 +236,82 @@ footer h1 {
 footer a,
 footer a:hover {
   color: rgb(255, 197, 62);
+}
+
+/* Custom styles for decoration */
+.content-column {
+  background-color: #f5deb3; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the column */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Style for the form inputs */
+.form-group label {
+  font-weight: bolder; /* Bold labels */
+  color: #000000; /* Dark text color */
+}
+
+.form-control {
+  border-radius: 5px; /* Rounded input fields */
+  background-color: #ffffff;
+  border: 1px solid black;
+}
+
+.btn-primary {
+  background-color: #309d24; /* Primary button color */
+  border-color: #37d61797; /* Border color */
+}
+
+.btn-primary:hover {
+  background-color: #126a0f; /* Darker background on hover */
+  border-color: #0d5810; /* Darker border color on hover */
+}
+
+/* Animation for the fiery effect */
+@keyframes fieryEffect {
+  0% {
+    background-color: #ffcc00; /* Initial color */
+    transform: scale(1);
+  }
+  50% {
+    background-color: #ff6600; /* Mid-color */
+    transform: scale(1.05); /* Slightly larger scale */
+  }
+  100% {
+    background-color: #ff3300; /* Final color */
+    transform: scale(1);
+  }
+}
+
+/* Apply the animation to the form */
+.fiery-form {
+  animation: fieryEffect 10.4s ease-in-out infinite alternate; /* Slower animation */
+  margin: 0 auto; /* Center the form horizontally */
+  width: 80%; /* Set a width to control the size */
+}
+
+.fiery-form .card {
+  background-color: #fce6be; /* Burnt paper color inside the fiery frame */
+  border: 1px solid black;
+}
+
+.header-form-wrapper {
+  position: relative; /* Position the wrapper relative to its normal position */
+  margin-bottom: 50px; /* Add space between the header and form */
+  animation: headerFormMovement 10.4s ease-in-out infinite alternate; /* Apply animation to the wrapper */
+}
+
+@keyframes headerFormMovement {
+  0% {
+    transform: translateY(0); /* Initial position */
+  }
+  100% {
+    transform: translateY(20px); /* Move the wrapper 20px down */
+  }
+}
+
+.text-center {
+  font-size: xxx-large;
+  color:rgb(255, 197, 62);
 }
