@@ -141,6 +141,16 @@ let x1 = calcPosition(radius, Math.cos, segments, 2.5);
 let y1 = calcPosition(radius, Math.sin, segments, 2.5);
 let x2 = calcPosition(radius, Math.cos, segments, 4.5);
 let y2 = calcPosition(radius, Math.sin, segments, 4.5);
+let x8 = calcPosition(radius, Math.cos, segments, 1.5);
+let y8 = calcPosition(radius, Math.sin, segments, 1.5);
+let x9 = calcPosition(radius, Math.cos, segments, 3.5);
+let y9 = calcPosition(radius, Math.sin, segments, 3.5);
+let x10 = calcPosition(radius, Math.cos, segments, 5.5);
+let y10 = calcPosition(radius, Math.sin, segments, 5.5);
+let x11 = calcPosition(radius, Math.cos, segments, 7.5);
+let y11 = calcPosition(radius, Math.sin, segments, 7.5);
+let x12 = calcPosition(radius, Math.cos, segments, 6.5);
+let y12 = calcPosition(radius, Math.sin, segments, 6.5);
 
 // Create a group to contain the clickable spaces
 var clickableSpaces = g.append("g");
@@ -150,7 +160,7 @@ clickableSpaces
   .attr("href", "HTML/egg.html")
   .append("image") // Use image element instead of circle
   .attr("class", "js-img")
-  .attr("href", "Images/Uranus.png") // Replace "image0.jpg" with the path to your image
+  .attr("href", "Images/uranus.png") // Replace "image0.jpg" with the path to your image
   .attr("x", x0 - 10) // Adjust position if needed
   .attr("y", y0 - 10) // Adjust position if needed
   .attr("width", 20)
@@ -169,7 +179,7 @@ clickableSpaces
   .attr("href", "HTML/form.html")
   .append("image") // Use image element instead of circle
   .attr("class", "js-img")
-  .attr("href", "Images/Jupiter.png") // Replace "image0.jpg" with the path to your image
+  .attr("href", "Images/jupiter.png") // Replace "image0.jpg" with the path to your image
   .attr("x", x1 - 10) // Adjust position if needed
   .attr("y", y1 - 10) // Adjust position if needed
   .attr("width", 20)
@@ -181,9 +191,69 @@ clickableSpaces
   .attr("href", "HTML/colormeotto.html")
   .append("image") // Use image element instead of circle
   .attr("class", "js-img")
-  .attr("href", "Images/Earth.png") // Replace "image0.jpg" with the path to your image
+  .attr("href", "Images/earth.png") // Replace "image0.jpg" with the path to your image
   .attr("x", x2 - 10) // Adjust position if needed
   .attr("y", y2 - 10) // Adjust position if needed
+  .attr("width", 20)
+  .attr("height", 20)
+  .style("cursor", "pointer");
+
+clickableSpaces
+  .append("a")
+  .attr("href", "https://platform.leolabs.space/visualization")
+  .append("image")
+  .attr("class", "js-img")
+  .attr("href", "Images/mars.png") // Replace with your image path
+  .attr("x", x8 - 10) // Adjust position if needed
+  .attr("y", y8 - 10) // Adjust position if needed
+  .attr("width", 20)
+  .attr("height", 20)
+  .style("cursor", "pointer");
+
+clickableSpaces
+  .append("a")
+  .attr("href", "https://ottovonschirach.bandcamp.com/music")
+  .append("image")
+  .attr("class", "js-img")
+  .attr("href", "Images/saturn.png") // Replace with your image path
+  .attr("x", x9 - 10) // Adjust position if needed
+  .attr("y", y9 - 10) // Adjust position if needed
+  .attr("width", 20)
+  .attr("height", 20)
+  .style("cursor", "pointer");
+
+clickableSpaces
+  .append("a")
+  .attr("href", "https://2050.earth")
+  .append("image")
+  .attr("class", "js-img")
+  .attr("href", "Images/neptune.png") // Replace with your image path
+  .attr("x", x10 - 10) // Adjust position if needed
+  .attr("y", y10 - 10) // Adjust position if needed
+  .attr("width", 20)
+  .attr("height", 20)
+  .style("cursor", "pointer");
+
+clickableSpaces
+  .append("a")
+  .attr("href", "https://bermudatrianglefamily.bigcartel.com")
+  .append("image")
+  .attr("class", "js-img")
+  .attr("href", "Images/venus.png") // Replace with your image path
+  .attr("x", x11 - 10) // Adjust position if needed
+  .attr("y", y11 - 10) // Adjust position if needed
+  .attr("width", 20)
+  .attr("height", 20)
+  .style("cursor", "pointer");
+
+clickableSpaces
+  .append("a")
+  .attr("href", "https://www.youtube.com/channel/UCpAG00EDhkQ3w9VMTXiq3Pw")
+  .append("image")
+  .attr("class", "js-img")
+  .attr("href", "Images/mercury.png") // Replace with your image path
+  .attr("x", x12 - 10) // Adjust position if needed
+  .attr("y", y12 - 10) // Adjust position if needed
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
