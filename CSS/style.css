@@ -61,7 +61,7 @@ body {
 
 #mynav a.active {
   font-weight: bold;
-  color: rgb(255, 197, 62);
+  color: rgb(255, 210, 74);
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -237,13 +237,13 @@ select.form-select {
 
 /* Style the submit button */
 .btn-primary {
-  background-color: #007bff; /* Blue color */
-  border-color: #007bff;
+  background-color: #309d24; /* Blue color */
+  border-color: #37d61797;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  border-color: #0056b3;
+  background-color: #126a0f; /* Darker blue on hover */
+  border-color: #0d5810;
 }
 
 footer h1 {
