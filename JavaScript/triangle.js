@@ -160,7 +160,7 @@ clickableSpaces
   .attr("href", "HTML/egg.html")
   .append("image") // Use image element instead of circle
   .attr("class", "js-img")
-  .attr("href", "Images/uranus.png") // Replace "image0.jpg" with the path to your image
+  .attr("href", "Images/Uranus.png") // Replace "image0.jpg" with the path to your image
   .attr("x", x0 - 10) // Adjust position if needed
   .attr("y", y0 - 10) // Adjust position if needed
   .attr("width", 20)
@@ -179,7 +179,7 @@ clickableSpaces
   .attr("href", "HTML/form.html")
   .append("image") // Use image element instead of circle
   .attr("class", "js-img")
-  .attr("href", "Images/jupiter.png") // Replace "image0.jpg" with the path to your image
+  .attr("href", "Images/Jupiter.png") // Replace "image0.jpg" with the path to your image
   .attr("x", x1 - 10) // Adjust position if needed
   .attr("y", y1 - 10) // Adjust position if needed
   .attr("width", 20)
@@ -191,7 +191,7 @@ clickableSpaces
   .attr("href", "HTML/colormeotto.html")
   .append("image") // Use image element instead of circle
   .attr("class", "js-img")
-  .attr("href", "Images/earth.png") // Replace "image0.jpg" with the path to your image
+  .attr("href", "Images/Earth.png") // Replace "image0.jpg" with the path to your image
   .attr("x", x2 - 10) // Adjust position if needed
   .attr("y", y2 - 10) // Adjust position if needed
   .attr("width", 20)
@@ -203,7 +203,7 @@ clickableSpaces
   .attr("href", "https://platform.leolabs.space/visualization")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/mars.png") // Replace with your image path
+  .attr("href", "Images/Mars.png") // Replace with your image path
   .attr("x", x8 - 10) // Adjust position if needed
   .attr("y", y8 - 10) // Adjust position if needed
   .attr("width", 20)
@@ -215,7 +215,7 @@ clickableSpaces
   .attr("href", "https://ottovonschirach.bandcamp.com/music")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/saturn.png") // Replace with your image path
+  .attr("href", "Images/Saturn.png") // Replace with your image path
   .attr("x", x9 - 10) // Adjust position if needed
   .attr("y", y9 - 10) // Adjust position if needed
   .attr("width", 20)
@@ -227,7 +227,7 @@ clickableSpaces
   .attr("href", "https://2050.earth")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/neptune.png") // Replace with your image path
+  .attr("href", "Images/Neptune.png") // Replace with your image path
   .attr("x", x10 - 10) // Adjust position if needed
   .attr("y", y10 - 10) // Adjust position if needed
   .attr("width", 20)
@@ -239,7 +239,7 @@ clickableSpaces
   .attr("href", "https://bermudatrianglefamily.bigcartel.com")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/venus.png") // Replace with your image path
+  .attr("href", "Images/Venus.png") // Replace with your image path
   .attr("x", x11 - 10) // Adjust position if needed
   .attr("y", y11 - 10) // Adjust position if needed
   .attr("width", 20)
@@ -251,7 +251,7 @@ clickableSpaces
   .attr("href", "https://www.youtube.com/channel/UCpAG00EDhkQ3w9VMTXiq3Pw")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/mercury.png") // Replace with your image path
+  .attr("href", "Images/Mercury.png") // Replace with your image path
   .attr("x", x12 - 10) // Adjust position if needed
   .attr("y", y12 - 10) // Adjust position if needed
   .attr("width", 20)

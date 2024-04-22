@@ -43,20 +43,20 @@ Future Improvements:
 
 User Stories:
 
-1. Aliens:
+Aliens:
 
-    WHO: An extraterrestrial.
-    WHAT: Learn how to navigate the website.
-    WHY: Clear instructions and an easy-to-use design are essential for quick understanding.
+    1. WHO: An extraterrestrial.
+    2. WHAT: Learn how to navigate the website.
+    3. WHY: Clear instructions and an easy-to-use design are essential for quick understanding.
 
-2. Earthlings:
+Earthlings:
 
-    WHO: Humans from Earth.
-    WHAT: Navigate the website easily.
-    WHY: Intuitive design and clear organization are crucial for finding information and engaging with features.
+    1. WHO: Humans from Earth.
+    2. WHAT: Navigate the website easily.
+    3. WHY: Intuitive design and clear organization are crucial for finding information and engaging with features.
 
-3. Cryptids:
+Cryptids:
 
-    WHO: Cryptids.
-    WHAT: Explore the website's features.
-    WHY: Provide a seamless experience that fosters curiosity and creativity, catering to diverse user groups.
+    1. WHO: Cryptids.
+    2. WHAT: Explore the website's features.
+    3. WHY: Provide a seamless experience that fosters curiosity and creativity, catering to diverse user groups.
