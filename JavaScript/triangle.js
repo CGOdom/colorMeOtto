@@ -157,7 +157,7 @@ var clickableSpaces = g.append("g");
 
 clickableSpaces
   .append("a")
-  .attr("href", "HTML/egg.html")
+  .attr("href", "https://www.cameronsworld.net/")
   .append("image") // Use image element instead of circle
   .attr("class", "js-img")
   .attr("href", "Images/Uranus.png") // Replace "image0.jpg" with the path to your image
@@ -200,7 +200,7 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://platform.leolabs.space/visualization")
+  .attr("href", "https://www.15questions.net/interview/fifteen-questions-otto-von-schirach/page-1/")
   .append("image")
   .attr("class", "js-img")
   .attr("href", "Images/Mars.png") // Replace with your image path
@@ -224,7 +224,7 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://2050.earth")
+  .attr("href", "https://bermudatrianglefamily.bigcartel.com")
   .append("image")
   .attr("class", "js-img")
   .attr("href", "Images/Neptune.png") // Replace with your image path
@@ -236,7 +236,7 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://bermudatrianglefamily.bigcartel.com")
+  .attr("href", "https://www.instagram.com/ottovonschirach/?hl=en")
   .append("image")
   .attr("class", "js-img")
   .attr("href", "Images/Venus.png") // Replace with your image path
@@ -257,4 +257,3 @@ clickableSpaces
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
-  

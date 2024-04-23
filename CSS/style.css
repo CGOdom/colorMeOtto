@@ -158,43 +158,6 @@ select.form-select {
   animation: colorMovement 5s infinite alternate; /* Apply animation to color movement */
 }
 
-/* UFO effect */
-.cool-effect::after {
-  content: "";
-  position: absolute;
-  top: 25%; /* Adjust initial position */
-  left: 25%; /* Adjust initial position */
-  width: 100px; /* Adjust UFO width */
-  height: 50px; /* Adjust UFO height */
-  border-radius: 50%;
-  background: radial-gradient(
-    rgba(255, 255, 255, 0.7),
-    transparent
-  ); /* Create UFO shape */
-  animation: ufo 15s infinite linear; /* Add UFO animation */
-}
-
-@keyframes ufo {
-  0% {
-    transform: translate(-50%, -50%) translateX(0px) translateY(0px); /* Initial position */
-  }
-  25% {
-    transform: translate(-50%, -50%) translateX(calc(100vw - 100px))
-      translateY(calc(100vh - 50px)); /* Move to bottom right */
-  }
-  50% {
-    transform: translate(-50%, -50%) translateX(0px)
-      translateY(calc(100vh - 50px)); /* Move to bottom left */
-  }
-  75% {
-    transform: translate(-50%, -50%) translateX(calc(-100vw + 100px))
-      translateY(calc(-100vh + 50px)); /* Move to top left */
-  }
-  100% {
-    transform: translate(-50%, -50%) translateX(0px) translateY(0px); /* Move back to initial position */
-  }
-}
-
 .cropped-image {
   width: 800px; /* Desired width */
   height: 600px; /* Desired height */
@@ -323,4 +286,37 @@ footer a:hover {
 .title-box {
   background-color: transparent;
   padding: 20px;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes ufoHover {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  75% {
+    transform: translate(50px, 50px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.ufo-image {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: -1; /* Places the UFO behind other elements */
+  animation: ufoHover 6s ease-in-out infinite;
+  width: 200px; /* Adjust this value as needed */
+  height: auto; /* This maintains the aspect ratio */
 }
