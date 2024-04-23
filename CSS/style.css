@@ -320,3 +320,8 @@ footer a:hover {
   width: 200px; /* Adjust this value as needed */
   height: auto; /* This maintains the aspect ratio */
 }
+
+.resizing2 {
+  height: 110px; /* Adjust the height as needed */
+  resize: vertical; /* Allow vertical resizing */
+}
