@@ -34,7 +34,7 @@ function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   // Update UFO position with random values and animate its movement
   function updateUFOPosition() {
     // Generate random destination coordinates within the page boundaries
@@ -42,17 +42,17 @@ $(document).ready(function() {
     var randomY = getRandomNumber(0, window.innerHeight - 200); // Adjust 200 based on UFO height
 
     // Calculate distance to travel in x and y directions
-    var dx = randomX - parseInt($('.ufo-image').css('left'));
-    var dy = randomY - parseInt($('.ufo-image').css('top'));
+    var dx = randomX - parseInt($(".ufo-image").css("left"));
+    var dy = randomY - parseInt($(".ufo-image").css("top"));
 
     // Calculate the duration of the animation based on distance
     var distance = Math.sqrt(dx * dx + dy * dy);
-    var duration = distance * 0.05 + 's'; // Adjust multiplier for speed
+    var duration = distance * 0.05 + "s"; // Adjust multiplier for speed
 
     // Update UFO position and animate its movement
-    $('.ufo-image').animate(
-      { left: randomX + 'px', top: randomY + 'px' },
-      { duration: duration, easing: 'linear' }
+    $(".ufo-image").animate(
+      { left: randomX + "px", top: randomY + "px" },
+      { duration: duration, easing: "linear" }
     );
   }
 

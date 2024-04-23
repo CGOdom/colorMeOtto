@@ -200,7 +200,10 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://www.15questions.net/interview/fifteen-questions-otto-von-schirach/page-1/")
+  .attr(
+    "href",
+    "https://www.15questions.net/interview/fifteen-questions-otto-von-schirach/page-1/"
+  )
   .append("image")
   .attr("class", "js-img")
   .attr("href", "Images/Mars.png") // Replace with your image path
@@ -258,7 +261,7 @@ clickableSpaces
   .attr("height", 20)
   .style("cursor", "pointer");
 
-  $(document).ready(function() {
-    // Prevent the UFO from moving around
-    $('.ufo-image').css({ animation: 'none', right: '20px', bottom: '20px' });
-  });  
+$(document).ready(function () {
+  // Prevent the UFO from moving around
+  $(".ufo-image").css({ animation: "none", right: "20px", bottom: "20px" });
+});
