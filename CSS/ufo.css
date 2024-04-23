@@ -1,0 +1,31 @@
+.ufo-position {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    width: 400px;
+    height: auto;
+    animation: ufoHover 6s ease-in-out infinite;
+}
+  
+  @keyframes ufoHover {
+    0% {
+      transform: translateY(0px) translateX(0px);
+    }
+    50% {
+      transform: translateY(-10px) translateX(10px);
+    }
+    100% {
+      transform: translateY(0px) translateX(0px);
+    }
+  }
+
+  /* Add space between top of page and UFO */
+.container-ufo {
+    margin-top: 100px; /* Adjust the margin as needed */
+  }
+
+  .resizing {
+    height: 200px; /* Adjust the height as needed */
+    resize: vertical; /* Allow vertical resizing */
+  }

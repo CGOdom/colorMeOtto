@@ -257,3 +257,8 @@ clickableSpaces
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
+
+  $(document).ready(function() {
+    // Prevent the UFO from moving around
+    $('.ufo-image').css({ animation: 'none', right: '20px', bottom: '20px' });
+  });  
