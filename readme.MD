@@ -19,16 +19,17 @@ This is a basic website for a coloring book based on the artist, Otto von Schira
 Functionality:
 
 1. Navigation links for easy access to different sections of the website.
-2. Carousel to showcase coloring book pages for preview.
-3. Form for signing up or exchanging souls (as per the humor in the footer).
-4. Interactive UFO animation using D3.js in the background.
+2. Different links to explore related to Otto.
+3. Carousel to showcase coloring book pages for preview.
+4. Form for signing up.
+5. Interactive UFO animation in the background.
 
 
 Technologies:
 
 1. HTML, CSS for basic structure and styling.
 2. Bootstrap 5 for responsive design and components.
-3. JavaScript and D3.js for interactive elements like the UFO animation.
+3. JavaScript, D3.js
 
 
 Future Improvements:

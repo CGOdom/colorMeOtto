@@ -6,6 +6,7 @@
   width: 400px;
   height: auto;
   animation: ufoHover 6s ease-in-out infinite;
+  margin: auto;
 }
 
 @keyframes ufoHover {
@@ -23,4 +24,9 @@
 /* Add space between top of page and UFO */
 .container-ufo {
   margin-top: 100px; 
+}
+
+.ufo-container {
+  display: flex;
+  justify-content: center;
 }
