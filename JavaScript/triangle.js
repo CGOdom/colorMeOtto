@@ -1,16 +1,16 @@
-// Set up the SVG container to fill the browser window with padding
-var padding = 50; // Amount of padding around the SVG content
+// Set up the SVG container to fill the browser window with padding //
+var padding = 50; 
 var svg = d3.select("svg"),
-  width = window.innerWidth - 2 * padding, // Subtract padding from both sides
-  height = window.innerHeight - 2 * padding, // Subtract padding from top and bottom
+  width = window.innerWidth - 2 * padding, 
+  height = window.innerHeight - 2 * padding, 
   radius = Math.min(width, height) / 2;
 
 svg
   .attr("width", window.innerWidth)
   .attr("height", window.innerHeight)
-  .style("background-color", "black"); // Ensuring the SVG background is still black
+  .style("background-color", "black"); 
 
-// Update the group transform to center based on the new dimensions, considering padding
+// Update the group transform to center based on the new dimensions, considering padding //
 var g = svg
   .append("g")
   .attr(
@@ -28,26 +28,26 @@ var arc = d3
 function rotateTriangle() {
   g.select(".triangle")
     .transition()
-    .duration(8000 * Math.random() + 5000) // duration of animation in milliseconds
-    .ease(d3.easeCubic) // Apply easing
+    .duration(8000 * Math.random() + 5000) 
+    .ease(d3.easeCubic)
     .attrTween("transform", function () {
       return d3.interpolateString("rotate(0)", "rotate(360)");
     })
-    .on("end", rotateTriangle); // Loop the animation
+    .on("end", rotateTriangle); 
 }
 
 function rotateTriangle2() {
   g.select(".triangle2")
     .transition()
-    .duration(8000 * Math.random() + 5000) // duration of animation in milliseconds
-    .ease(d3.easeCubic) // Apply easing
+    .duration(8000 * Math.random() + 5000) 
+    .ease(d3.easeCubic) 
     .attrTween("transform", function () {
       return d3.interpolateString("rotate(0)", "rotate(-360)");
     })
-    .on("end", rotateTriangle2); // Loop the animation
+    .on("end", rotateTriangle2); 
 }
 
-// Draw the encompassing triangle and start the rotation
+// Draw the encompassing triangle and start the rotation //
 g.append("path")
   .attr("class", "triangle")
   .attr(
@@ -67,9 +67,9 @@ g.append("path")
   .attr("fill", "none")
   .attr("stroke", "#f0f0f0")
   .style("stroke-width", "7px")
-  .call(rotateTriangle); // Start the rotation
+  .call(rotateTriangle); // Start the rotation //
 
-// Draw the encompassing triangle and start the rotation
+// Draw the encompassing triangle and start the rotation //
 g.append("path")
   .attr("class", "triangle2")
   .attr(
@@ -89,31 +89,31 @@ g.append("path")
   .attr("fill", "none")
   .attr("stroke", "#f0f0f0")
   .style("stroke-width", "7px")
-  .call(rotateTriangle2); // Start the rotation
+  .call(rotateTriangle2); // Start the rotation //
 
-// Function to randomly return either 1 or -1
+// Function to randomly return either 1 or -1 //
 function randomSign() {
   return Math.random() < 0.5 ? -1 : 1;
 }
 
-// Define the rotation animation for the segments
-// Create the ring segments
-var segments = 8; // number of segments in the ring
+// Define the rotation animation for the segments //
+// Create the ring segments //
+var segments = 8; // number of segments in the ring //
 function rotateSegments() {
   g.selectAll(".segment")
     .transition()
-    .duration(8000 * Math.random() + 5000) // duration of animation in milliseconds
-    .ease(d3.easeCubic) // Apply easing
+    .duration(8000 * Math.random() + 5000) 
+    .ease(d3.easeCubic)
     .attrTween("transform", function () {
       return d3.interpolateString(
         "rotate(0)",
         "rotate(" + 360 * randomSign() + ")"
       );
     })
-    .on("end", rotateSegments); // Loop the animation
+    .on("end", rotateSegments); // Loop the animation //
 }
 
-// Create the ring segments and start the counter rotation
+// Create the ring segments and start the counter rotation //
 for (var i = 0; i < segments; i++) {
   g.append("path")
     .attr("class", "segment")
@@ -127,10 +127,10 @@ for (var i = 0; i < segments; i++) {
     .attr("stroke", "white")
     .style("stroke-width", "7px")
     .attr("transform", "rotate(" + (i * 360) / segments + ")")
-    .call(rotateSegments); // Start the counter rotation
+    .call(rotateSegments); // Start the counter rotation //
 }
 
-// Create and position only three clickable spaces between pairs of segments
+// Create 8 clickable spaces between pairs of segments //
 function calcPosition(radius, trigOp, segments, c) {
   return radius * 0.35 * trigOp(((Math.PI * 2) / segments) * c);
 }
@@ -152,36 +152,36 @@ let y11 = calcPosition(radius, Math.sin, segments, 7.5);
 let x12 = calcPosition(radius, Math.cos, segments, 6.5);
 let y12 = calcPosition(radius, Math.sin, segments, 6.5);
 
-// Create a group to contain the clickable spaces
+// Create a group to contain the clickable spaces //
 var clickableSpaces = g.append("g");
 
 clickableSpaces
   .append("a")
   .attr("href", "https://www.cameronsworld.net/")
-  .append("image") // Use image element instead of circle
+  .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Uranus.png") // Replace "image0.jpg" with the path to your image
-  .attr("x", x0 - 10) // Adjust position if needed
-  .attr("y", y0 - 10) // Adjust position if needed
+  .attr("href", "Images/Uranus.png")
+  .attr("x", x0 - 10) 
+  .attr("y", y0 - 10) 
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer")
-  .style("opacity", 0) // Initially hide the image
+  .style("opacity", 0) 
   .on("mouseover", function () {
-    d3.select(this).style("opacity", 1); // Make the image visible on hover
+    d3.select(this).style("opacity", 1); 
   })
   .on("mouseout", function () {
-    d3.select(this).style("opacity", 0); // Hide the image on mouseout
+    d3.select(this).style("opacity", 0); 
   });
 
 clickableSpaces
   .append("a")
   .attr("href", "HTML/form.html")
-  .append("image") // Use image element instead of circle
+  .append("image") 
   .attr("class", "js-img")
-  .attr("href", "Images/Jupiter.png") // Replace "image0.jpg" with the path to your image
-  .attr("x", x1 - 10) // Adjust position if needed
-  .attr("y", y1 - 10) // Adjust position if needed
+  .attr("href", "Images/Jupiter.png") 
+  .attr("x", x1 - 10) 
+  .attr("y", y1 - 10) 
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
@@ -189,11 +189,11 @@ clickableSpaces
 clickableSpaces
   .append("a")
   .attr("href", "HTML/colormeotto.html")
-  .append("image") // Use image element instead of circle
+  .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Earth.png") // Replace "image0.jpg" with the path to your image
-  .attr("x", x2 - 10) // Adjust position if needed
-  .attr("y", y2 - 10) // Adjust position if needed
+  .attr("href", "Images/Earth.png") 
+  .attr("x", x2 - 10) 
+  .attr("y", y2 - 10) 
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
@@ -231,8 +231,8 @@ clickableSpaces
   .append("image")
   .attr("class", "js-img")
   .attr("href", "Images/Neptune.png") // Replace with your image path
-  .attr("x", x10 - 10) // Adjust position if needed
-  .attr("y", y10 - 10) // Adjust position if needed
+  .attr("x", x10 - 10) 
+  .attr("y", y10 - 10) 
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
@@ -242,9 +242,9 @@ clickableSpaces
   .attr("href", "https://www.instagram.com/ottovonschirach/?hl=en")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Venus.png") // Replace with your image path
-  .attr("x", x11 - 10) // Adjust position if needed
-  .attr("y", y11 - 10) // Adjust position if needed
+  .attr("href", "Images/Venus.png") 
+  .attr("x", x11 - 10) 
+  .attr("y", y11 - 10) 
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
@@ -254,14 +254,14 @@ clickableSpaces
   .attr("href", "https://www.youtube.com/channel/UCpAG00EDhkQ3w9VMTXiq3Pw")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Mercury.png") // Replace with your image path
-  .attr("x", x12 - 10) // Adjust position if needed
-  .attr("y", y12 - 10) // Adjust position if needed
+  .attr("href", "Images/Mercury.png") 
+  .attr("x", x12 - 10) 
+  .attr("y", y12 - 10) 
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
 
 $(document).ready(function () {
-  // Prevent the UFO from moving around
+  // Prevent the UFO from moving around //
   $(".ufo-image").css({ animation: "none", right: "20px", bottom: "20px" });
 });
