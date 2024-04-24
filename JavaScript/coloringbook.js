@@ -1,61 +1,61 @@
-// Function to create a random star
+// Function to create a random star //
 function createStar() {
   const star = document.createElement("div");
   star.className = "star";
-  star.style.width = `${Math.random() * 2 + 1}px`; // Random width between 1px and 3px
-  star.style.height = star.style.width; // Make the star a perfect circle
-  star.style.left = `${Math.random() * window.innerWidth}px`; // Random horizontal position
-  star.style.top = `${Math.random() * window.innerHeight}px`; // Random vertical position
+  star.style.width = `${Math.random() * 2 + 1}px`; 
+  star.style.height = star.style.width; 
+  star.style.left = `${Math.random() * window.innerWidth}px`; 
+  star.style.top = `${Math.random() * window.innerHeight}px`; 
   document.body.appendChild(star);
 }
 
-// Create stars at random intervals
-setInterval(createStar, 50); // Adjust interval for more or fewer stars
+// Create stars at random intervals //
+setInterval(createStar, 50); 
 
-// Manual carousel navigation
+// Manual carousel navigation //
 $(document).ready(function () {
   $("#carouselExample").carousel({
-    interval: false, // Disable automatic cycling
+    interval: false, 
   });
 
-  // Navigate to previous slide
+  // Navigate to previous slide //
   $(".carousel-control-prev").click(function () {
     $("#carouselExample").carousel("prev");
   });
 
-  // Navigate to next slide
+  // Navigate to next slide //
   $(".carousel-control-next").click(function () {
     $("#carouselExample").carousel("next");
   });
 });
 
-// Function to generate a random number between min and max
+
 function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
 
 $(document).ready(function () {
-  // Update UFO position with random values and animate its movement
+  // UFO position with random values //
   function updateUFOPosition() {
-    // Generate random destination coordinates within the page boundaries
-    var randomX = getRandomNumber(0, window.innerWidth - 200); // Adjust 200 based on UFO width
-    var randomY = getRandomNumber(0, window.innerHeight - 200); // Adjust 200 based on UFO height
+    // Generate random destinations //
+    var randomX = getRandomNumber(0, window.innerWidth - 200); 
+    var randomY = getRandomNumber(0, window.innerHeight - 200); 
 
-    // Calculate distance to travel in x and y directions
+    // Calculate distance to travel in x and y directions //
     var dx = randomX - parseInt($(".ufo-image").css("left"));
     var dy = randomY - parseInt($(".ufo-image").css("top"));
 
-    // Calculate the duration of the animation based on distance
+    // Calculate the duration of the animation based on distance //
     var distance = Math.sqrt(dx * dx + dy * dy);
-    var duration = distance * 0.05 + "s"; // Adjust multiplier for speed
+    var duration = distance * 0.05 + "s"; 
 
-    // Update UFO position and animate its movement
+    // Update UFO position //
     $(".ufo-image").animate(
       { left: randomX + "px", top: randomY + "px" },
       { duration: duration, easing: "linear" }
     );
   }
 
-  // Call updateUFOPosition function every 6 seconds (same duration as animation)
+  // Call updateUFOPosition function every 6 seconds (same duration as animation) //
   setInterval(updateUFOPosition, 6000);
 });
