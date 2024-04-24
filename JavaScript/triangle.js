@@ -206,9 +206,9 @@ clickableSpaces
   )
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Mars.png") // Replace with your image path
-  .attr("x", x8 - 10) // Adjust position if needed
-  .attr("y", y8 - 10) // Adjust position if needed
+  .attr("href", "Images/Mars.png") 
+  .attr("x", x8 - 10) 
+  .attr("y", y8 - 10) 
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
@@ -218,9 +218,9 @@ clickableSpaces
   .attr("href", "https://ottovonschirach.bandcamp.com/music")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Saturn.png") // Replace with your image path
-  .attr("x", x9 - 10) // Adjust position if needed
-  .attr("y", y9 - 10) // Adjust position if needed
+  .attr("href", "Images/Saturn.png") 
+  .attr("x", x9 - 10) 
+  .attr("y", y9 - 10) 
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
@@ -230,7 +230,7 @@ clickableSpaces
   .attr("href", "https://bermudatrianglefamily.bigcartel.com")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Neptune.png") // Replace with your image path
+  .attr("href", "Images/Neptune.png") 
   .attr("x", x10 - 10) 
   .attr("y", y10 - 10) 
   .attr("width", 20)
