@@ -1,17 +1,17 @@
-/* Add styles for the SVG background and the elements */
+/* Styles for the SVG background and the elements */
 svg {
-  background-color: black; /* Set the background color of the SVG */
+  background-color: black; /* Background color of the SVG */
 }
 
-/* Make the entire browser window black */
+
 body {
-  margin: 0; /* Remove default margin */
-  background-color: black !important; /* Set the background color of the body */
-  display: flex; /* Use flexbox to center the content */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  height: 100vh; /* Full viewport height */
-  color: white; /* Set text color to white */
+  margin: 0; 
+  background-color: black !important; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  color: white;
   flex-direction: column;
   min-height: 100vh;
   position: relative; /* Required for absolute positioning of UFO */
@@ -23,17 +23,17 @@ body {
 
 .triangle,
 .triangle2 {
-  fill: none; /* Clear fill for triangles */
+  fill: none; 
 }
 
 .segment {
-  fill: none; /* Clear fill for segments */
-  stroke: white; /* White stroke for segments */
+  fill: none; 
+  stroke: white;
 }
 
 /* Hover effect */
 .clickable-space:hover .js-img {
-  opacity: 1; /* Make the image visible on hover */
+  opacity: 1; 
 }
 
 #mynav {
@@ -103,7 +103,7 @@ select.form-select {
 /* Adjust size of carousel control buttons */
 .carousel-control-prev,
 .carousel-control-next {
-  width: 20%; /* Reduce width by 60% */
+  width: 20%; 
 }
 
 /* Center dropdown menu */
@@ -116,10 +116,10 @@ select.form-select {
 
 /* Cool effect for header text */
 .cool-effect {
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.063); /* Add electric glowing effect */
-  font-family: "Arial Rounded MT Bold", sans-serif; /* Apply rounded font */
-  letter-spacing: 2px; /* Adjust letter spacing */
-  position: relative; /* Required for animation */
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.063); 
+  font-family: "Arial Rounded MT Bold", sans-serif; 
+  letter-spacing: 2px; 
+  position: relative; 
   animation: colorMovement 5s infinite alternate; /* Apply animation to color movement */
   color: transparent;
 }
@@ -136,7 +136,7 @@ select.form-select {
 
 /* Apply gradient background to text */
 .cool-effect::before {
-  content: attr(data-text); /* Set content to original text */
+  content: attr(data-text); 
   position: absolute;
   top: 0;
   left: 0;
@@ -150,18 +150,18 @@ select.form-select {
     green,
     blue,
     violet
-  ); /* Gradient colors */
-  background-size: 400% 400%; /* Increase size to animate */
-  -webkit-background-clip: text; /* Clip background to text (for WebKit browsers) */
-  background-clip: text; /* Clip background to text (standard) */
-  -webkit-text-fill-color: transparent; /* Hide original text */
-  animation: colorMovement 5s infinite alternate; /* Apply animation to color movement */
+  ); 
+  background-size: 400% 400%; 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  animation: colorMovement 5s infinite alternate;
 }
 
 .cropped-image {
-  width: 800px; /* Desired width */
-  height: 600px; /* Desired height */
-  object-fit: scale-down; /* Cover the container, cropping as needed */
+  width: 800px; 
+  height: 600px; 
+  object-fit: scale-down; 
 }
 
 /* Rainbow effect */
@@ -203,74 +203,74 @@ footer a:hover {
 
 /* Custom styles for decoration */
 .content-column {
-  background-color: #f5deb3; /* Light gray background */
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Padding inside the column */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  background-color: #f5deb3; 
+  border-radius: 10px; 
+  padding: 20px; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 /* Style for the form inputs */
 .form-group label {
-  font-weight: bolder; /* Bold labels */
-  color: #000000; /* Dark text color */
+  font-weight: bolder; 
+  color: #000000; 
 }
 
 .form-control {
-  border-radius: 5px; /* Rounded input fields */
+  border-radius: 5px; 
   background-color: #ffffff;
   border: 1px solid black;
 }
 
 .btn-primary {
-  background-color: #309d24; /* Primary button color */
-  border-color: #37d61797; /* Border color */
+  background-color: #309d24; 
+  border-color: #37d61797; 
 }
 
 .btn-primary:hover {
-  background-color: #126a0f; /* Darker background on hover */
-  border-color: #0d5810; /* Darker border color on hover */
+  background-color: #126a0f; 
+  border-color: #0d5810; 
 }
 
 /* Animation for the fiery effect */
 @keyframes fieryEffect {
   0% {
-    background-color: #ffcc00; /* Initial color */
+    background-color: #ffcc00; 
     transform: scale(1);
   }
   50% {
-    background-color: #ff6600; /* Mid-color */
-    transform: scale(1.05); /* Slightly larger scale */
+    background-color: #ff6600; 
+    transform: scale(1.05); 
   }
   100% {
-    background-color: #ff3300; /* Final color */
+    background-color: #ff3300; 
     transform: scale(1);
   }
 }
 
 /* Apply the animation to the form */
 .fiery-form {
-  animation: fieryEffect 10.4s ease-in-out infinite alternate; /* Slower animation */
-  margin: 0 auto; /* Center the form horizontally */
-  width: 80%; /* Set a width to control the size */
+  animation: fieryEffect 10.4s ease-in-out infinite alternate; 
+  margin: 0 auto; 
+  width: 80%; 
 }
 
 .fiery-form .card {
-  background-color: #fce6be; /* Burnt paper color inside the fiery frame */
+  background-color: #fce6be; 
   border: 1px solid black;
 }
 
 .header-form-wrapper {
-  position: relative; /* Position the wrapper relative to its normal position */
-  margin-bottom: 50px; /* Add space between the header and form */
-  animation: headerFormMovement 10.4s ease-in-out infinite alternate; /* Apply animation to the wrapper */
+  position: relative; 
+  margin-bottom: 50px; 
+  animation: headerFormMovement 10.4s ease-in-out infinite alternate; 
 }
 
 @keyframes headerFormMovement {
   0% {
-    transform: translateY(0); /* Initial position */
+    transform: translateY(0); 
   }
   100% {
-    transform: translateY(20px); /* Move the wrapper 20px down */
+    transform: translateY(20px); 
   }
 }
 
@@ -280,7 +280,7 @@ footer a:hover {
 }
 
 .mb-4 {
-  margin-bottom: 60px; /* Adjust margin as needed */
+  margin-bottom: 60px; 
 }
 
 .title-box {
@@ -317,11 +317,11 @@ footer a:hover {
   left: 20px;
   z-index: -1; /* Places the UFO behind other elements */
   animation: ufoHover 6s ease-in-out infinite;
-  width: 200px; /* Adjust this value as needed */
-  height: auto; /* This maintains the aspect ratio */
+  width: 200px; 
+  height: auto; 
 }
 
 .resizing2 {
-  height: 110px; /* Adjust the height as needed */
-  resize: vertical; /* Allow vertical resizing */
+  height: 110px; 
+  resize: vertical; 
 }

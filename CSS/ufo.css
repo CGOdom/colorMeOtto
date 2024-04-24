@@ -22,10 +22,10 @@
 
 /* Add space between top of page and UFO */
 .container-ufo {
-  margin-top: 100px; /* Adjust the margin as needed */
+  margin-top: 100px; 
 }
 
 .resizing {
-  height: 200px; /* Adjust the height as needed */
-  resize: vertical; /* Allow vertical resizing */
+  height: 200px; 
+  resize: vertical; 
 }
