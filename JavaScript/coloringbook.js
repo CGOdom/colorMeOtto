@@ -2,20 +2,20 @@
 function createStar() {
   const star = document.createElement("div");
   star.className = "star";
-  star.style.width = `${Math.random() * 2 + 1}px`; 
-  star.style.height = star.style.width; 
-  star.style.left = `${Math.random() * window.innerWidth}px`; 
-  star.style.top = `${Math.random() * window.innerHeight}px`; 
+  star.style.width = `${Math.random() * 2 + 1}px`;
+  star.style.height = star.style.width;
+  star.style.left = `${Math.random() * window.innerWidth}px`;
+  star.style.top = `${Math.random() * window.innerHeight}px`;
   document.body.appendChild(star);
 }
 
 // Create stars at random intervals //
-setInterval(createStar, 50); 
+setInterval(createStar, 50);
 
 // Manual carousel navigation //
 $(document).ready(function () {
   $("#carouselExample").carousel({
-    interval: false, 
+    interval: false,
   });
 
   // Navigate to previous slide //
@@ -29,7 +29,6 @@ $(document).ready(function () {
   });
 });
 
-
 function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
@@ -38,8 +37,8 @@ $(document).ready(function () {
   // UFO position with random values //
   function updateUFOPosition() {
     // Generate random destinations //
-    var randomX = getRandomNumber(0, window.innerWidth - 200); 
-    var randomY = getRandomNumber(0, window.innerHeight - 200); 
+    var randomX = getRandomNumber(0, window.innerWidth - 200);
+    var randomY = getRandomNumber(0, window.innerHeight - 200);
 
     // Calculate distance to travel in x and y directions //
     var dx = randomX - parseInt($(".ufo-image").css("left"));
@@ -47,7 +46,7 @@ $(document).ready(function () {
 
     // Calculate the duration of the animation based on distance //
     var distance = Math.sqrt(dx * dx + dy * dy);
-    var duration = distance * 0.05 + "s"; 
+    var duration = distance * 0.05 + "s";
 
     // Update UFO position //
     $(".ufo-image").animate(

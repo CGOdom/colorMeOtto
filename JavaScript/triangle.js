@@ -1,14 +1,14 @@
 // Set up the SVG container to fill the browser window with padding //
-var padding = 50; 
+var padding = 50;
 var svg = d3.select("svg"),
-  width = window.innerWidth - 2 * padding, 
-  height = window.innerHeight - 2 * padding, 
+  width = window.innerWidth - 2 * padding,
+  height = window.innerHeight - 2 * padding,
   radius = Math.min(width, height) / 2;
 
 svg
   .attr("width", window.innerWidth)
   .attr("height", window.innerHeight)
-  .style("background-color", "black"); 
+  .style("background-color", "black");
 
 // Update the group transform to center based on the new dimensions, considering padding //
 var g = svg
@@ -28,23 +28,23 @@ var arc = d3
 function rotateTriangle() {
   g.select(".triangle")
     .transition()
-    .duration(8000 * Math.random() + 5000) 
+    .duration(8000 * Math.random() + 5000)
     .ease(d3.easeCubic)
     .attrTween("transform", function () {
       return d3.interpolateString("rotate(0)", "rotate(360)");
     })
-    .on("end", rotateTriangle); 
+    .on("end", rotateTriangle);
 }
 
 function rotateTriangle2() {
   g.select(".triangle2")
     .transition()
-    .duration(8000 * Math.random() + 5000) 
-    .ease(d3.easeCubic) 
+    .duration(8000 * Math.random() + 5000)
+    .ease(d3.easeCubic)
     .attrTween("transform", function () {
       return d3.interpolateString("rotate(0)", "rotate(-360)");
     })
-    .on("end", rotateTriangle2); 
+    .on("end", rotateTriangle2);
 }
 
 // Draw the encompassing triangle and start the rotation //
@@ -102,7 +102,7 @@ var segments = 8; // number of segments in the ring //
 function rotateSegments() {
   g.selectAll(".segment")
     .transition()
-    .duration(8000 * Math.random() + 5000) 
+    .duration(8000 * Math.random() + 5000)
     .ease(d3.easeCubic)
     .attrTween("transform", function () {
       return d3.interpolateString(
@@ -161,27 +161,27 @@ clickableSpaces
   .append("image")
   .attr("class", "js-img")
   .attr("href", "Images/Uranus.png")
-  .attr("x", x0 - 10) 
-  .attr("y", y0 - 10) 
+  .attr("x", x0 - 10)
+  .attr("y", y0 - 10)
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer")
-  .style("opacity", 0) 
+  .style("opacity", 0)
   .on("mouseover", function () {
-    d3.select(this).style("opacity", 1); 
+    d3.select(this).style("opacity", 1);
   })
   .on("mouseout", function () {
-    d3.select(this).style("opacity", 0); 
+    d3.select(this).style("opacity", 0);
   });
 
 clickableSpaces
   .append("a")
   .attr("href", "HTML/form.html")
-  .append("image") 
+  .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Jupiter.png") 
-  .attr("x", x1 - 10) 
-  .attr("y", y1 - 10) 
+  .attr("href", "Images/Jupiter.png")
+  .attr("x", x1 - 10)
+  .attr("y", y1 - 10)
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
@@ -191,9 +191,9 @@ clickableSpaces
   .attr("href", "HTML/colormeotto.html")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Earth.png") 
-  .attr("x", x2 - 10) 
-  .attr("y", y2 - 10) 
+  .attr("href", "Images/Earth.png")
+  .attr("x", x2 - 10)
+  .attr("y", y2 - 10)
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
@@ -206,9 +206,9 @@ clickableSpaces
   )
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Mars.png") 
-  .attr("x", x8 - 10) 
-  .attr("y", y8 - 10) 
+  .attr("href", "Images/Mars.png")
+  .attr("x", x8 - 10)
+  .attr("y", y8 - 10)
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
@@ -218,9 +218,9 @@ clickableSpaces
   .attr("href", "https://ottovonschirach.bandcamp.com/music")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Saturn.png") 
-  .attr("x", x9 - 10) 
-  .attr("y", y9 - 10) 
+  .attr("href", "Images/Saturn.png")
+  .attr("x", x9 - 10)
+  .attr("y", y9 - 10)
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
@@ -230,9 +230,9 @@ clickableSpaces
   .attr("href", "https://bermudatrianglefamily.bigcartel.com")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Neptune.png") 
-  .attr("x", x10 - 10) 
-  .attr("y", y10 - 10) 
+  .attr("href", "Images/Neptune.png")
+  .attr("x", x10 - 10)
+  .attr("y", y10 - 10)
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
@@ -242,9 +242,9 @@ clickableSpaces
   .attr("href", "https://www.instagram.com/ottovonschirach/?hl=en")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Venus.png") 
-  .attr("x", x11 - 10) 
-  .attr("y", y11 - 10) 
+  .attr("href", "Images/Venus.png")
+  .attr("x", x11 - 10)
+  .attr("y", y11 - 10)
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
@@ -254,9 +254,9 @@ clickableSpaces
   .attr("href", "https://www.youtube.com/channel/UCpAG00EDhkQ3w9VMTXiq3Pw")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/Mercury.png") 
-  .attr("x", x12 - 10) 
-  .attr("y", y12 - 10) 
+  .attr("href", "Images/Mercury.png")
+  .attr("x", x12 - 10)
+  .attr("y", y12 - 10)
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer");
