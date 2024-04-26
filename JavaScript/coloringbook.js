@@ -1,17 +1,3 @@
-// Function to create a random star //
-function createStar() {
-  const star = document.createElement("div");
-  star.className = "star";
-  star.style.width = `${Math.random() * 2 + 1}px`;
-  star.style.height = star.style.width;
-  star.style.left = `${Math.random() * window.innerWidth}px`;
-  star.style.top = `${Math.random() * window.innerHeight}px`;
-  document.body.appendChild(star);
-}
-
-// Create stars at random intervals //
-setInterval(createStar, 50);
-
 // Manual carousel navigation //
 $(document).ready(function () {
   $("#carouselExample").carousel({
