@@ -6,9 +6,6 @@ svg {
 body {
   margin: 0;
   background-color: black !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
