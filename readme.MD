@@ -1,8 +1,6 @@
 # Project I: "colorMeOtto"
 
 
-GitHub link: https://github.com/CGOdom/colorMeOtto/tree/main
-
 Hosting link: https://cgodom.github.io/colorMeOtto/
 
 
