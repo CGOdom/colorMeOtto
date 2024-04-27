@@ -166,13 +166,6 @@ clickableSpaces
   .attr("width", 20)
   .attr("height", 20)
   .style("cursor", "pointer")
-  .style("opacity", 0)
-  .on("mouseover", function () {
-    d3.select(this).style("opacity", 1);
-  })
-  .on("mouseout", function () {
-    d3.select(this).style("opacity", 0);
-  });
 
 clickableSpaces
   .append("a")
