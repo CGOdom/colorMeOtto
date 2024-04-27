@@ -213,15 +213,15 @@ footer a:hover {
 @keyframes fieryEffect {
   0% {
     background-color: #ffcc00; 
-    transform: scale(1);
+    transform: 0;
   }
   50% {
     background-color: #ff6600; 
-    transform: scale(1.05); 
+    transform: 0; 
   }
   100% {
     background-color: #ff3300; 
-    transform: scale(1);
+    transform: 0;
   }
 }
 
@@ -245,10 +245,10 @@ footer a:hover {
 
 @keyframes headerFormMovement {
   0% {
-    transform: translateY(0); 
+    transform: 0; 
   }
   100% {
-    transform: translateY(20px); 
+    transform: 0; 
   }
 }
 
@@ -297,4 +297,17 @@ footer a:hover {
   animation: ufoHover 6s ease-in-out infinite;
   width: 200px; 
   height: auto; 
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 10px;
+  }
 }
