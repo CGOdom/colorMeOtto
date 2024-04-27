@@ -33,11 +33,9 @@ Technologies:
 Future Improvements:
 
 1. Enhance accessibility features for users with disabilities.
-2. Implement user authentication for personalized experiences and saving coloring progress.
-3. Expand the coloring book collection with more pages and themes.
-4. Interactive Coloring Pages.
-5. User Accounts and Profiles.
-6. Mobile Responsiveness.
+2. Interactive Coloring Pages.
+3. Implement user authentication for personalized experiences and saving coloring progress.
+4. User Accounts and Profiles.
 
 
 User Stories:
