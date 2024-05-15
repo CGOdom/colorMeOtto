@@ -157,7 +157,7 @@ var clickableSpaces = g.append("g");
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://www.cameronsworld.net/")
+  .attr("xlink:href", "https://www.cameronsworld.net/")
   .append("image")
   .attr("class", "js-img")
   .attr("xlink:href", "Images/earth.png")
@@ -169,7 +169,7 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "HTML/form.html")
+  .attr("xlink:href", "HTML/form.html")
   .append("image")
   .attr("class", "js-img")
   .attr("xlink:href", "Images/jupiter.png")
@@ -181,7 +181,7 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "HTML/colormeotto.html")
+  .attr("xlink:href", "HTML/colormeotto.html")
   .append("image")
   .attr("class", "js-img")
   .attr("xlink:href", "Images/uranus.png")
@@ -193,7 +193,7 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://www.15questions.net/interview/fifteen-questions-otto-von-schirach/page-1/")
+  .attr("xlink:href", "https://www.15questions.net/interview/fifteen-questions-otto-von-schirach/page-1/")
   .append("image")
   .attr("class", "js-img")
   .attr("xlink:href", "Images/mars.png")
@@ -205,7 +205,7 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://ottovonschirach.bandcamp.com/music")
+  .attr("xlink:href", "https://ottovonschirach.bandcamp.com/music")
   .append("image")
   .attr("class", "js-img")
   .attr("xlink:href", "Images/saturn.png")
@@ -217,7 +217,7 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://bermudatrianglefamily.bigcartel.com")
+  .attr("xlink:href", "https://bermudatrianglefamily.bigcartel.com")
   .append("image")
   .attr("class", "js-img")
   .attr("xlink:href", "Images/neptune.png")
@@ -229,7 +229,7 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://www.instagram.com/ottovonschirach/?hl=en")
+  .attr("xlink:href", "https://www.instagram.com/ottovonschirach/?hl=en")
   .append("image")
   .attr("class", "js-img")
   .attr("xlink:href", "Images/venus.png")
@@ -241,7 +241,7 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://www.youtube.com/channel/UCpAG00EDhkQ3w9VMTXiq3Pw")
+  .attr("xlink:href", "https://www.youtube.com/channel/UCpAG00EDhkQ3w9VMTXiq3Pw")
   .append("image")
   .attr("class", "js-img")
   .attr("xlink:href", "Images/mercury.png")
