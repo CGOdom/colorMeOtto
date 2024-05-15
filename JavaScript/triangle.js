@@ -232,7 +232,7 @@ clickableSpaces
   .attr("href", "https://www.instagram.com/ottovonschirach/?hl=en")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/venus.png")
+  .attr("href", "Images/venuss.png")
   .attr("x", x11 - 10)
   .attr("y", y11 - 10)
   .attr("width", 15)
