@@ -157,10 +157,10 @@ var clickableSpaces = g.append("g");
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://www.cameronsworld.net/")
+  .attr("xlink:href", "https://www.cameronsworld.net/")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/earth.png")
+  .attr("xlink:href", "Images/earth.png")
   .attr("x", x0 - 10)
   .attr("y", y0 - 10)
   .attr("width", 18)
@@ -169,10 +169,10 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "HTML/form.html")
+  .attr("xlink:href", "HTML/form.html")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/jupiter.png")
+  .attr("xlink:href", "Images/jupiter.png")
   .attr("x", x1 - 10)
   .attr("y", y1 - 10)
   .attr("width", 24)
@@ -181,10 +181,10 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "HTML/colormeotto.html")
+  .attr("xlink:href", "HTML/colormeotto.html")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/uranus.png")
+  .attr("xlink:href", "Images/uranus.png")
   .attr("x", x2 - 10)
   .attr("y", y2 - 10)
   .attr("width", 21.5)
@@ -193,13 +193,12 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr(
-    "href",
+  .attr("xlink:href",
     "https://www.15questions.net/interview/fifteen-questions-otto-von-schirach/page-1/"
   )
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/mars.png")
+  .attr("xlink:href", "Images/mars.png")
   .attr("x", x8 - 10)
   .attr("y", y8 - 10)
   .attr("width", 18)
@@ -208,10 +207,10 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://ottovonschirach.bandcamp.com/music")
+  .attr("xlink:href", "https://ottovonschirach.bandcamp.com/music")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/saturn.png")
+  .attr("xlink:href", "Images/saturn.png")
   .attr("x", x9 - 10)
   .attr("y", y9 - 10)
   .attr("width", 23.5)
@@ -220,10 +219,10 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://bermudatrianglefamily.bigcartel.com")
+  .attr("xlink:href", "https://bermudatrianglefamily.bigcartel.com")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/neptune.png")
+  .attr("xlink:href", "Images/neptune.png")
   .attr("x", x10 - 10)
   .attr("y", y10 - 10)
   .attr("width", 21.5)
@@ -232,10 +231,10 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://www.instagram.com/ottovonschirach/?hl=en")
+  .attr("xlink:href", "https://www.instagram.com/ottovonschirach/?hl=en")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/venus.png")
+  .attr("xlink:href", "Images/venus.png")
   .attr("x", x11 - 10)
   .attr("y", y11 - 10)
   .attr("width", 15)
@@ -244,10 +243,10 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("href", "https://www.youtube.com/channel/UCpAG00EDhkQ3w9VMTXiq3Pw")
+  .attr("xlink:href", "https://www.youtube.com/channel/UCpAG00EDhkQ3w9VMTXiq3Pw")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/mercury.png")
+  .attr("xlink:href", "Images/mercury.png")
   .attr("x", x12 - 10)
   .attr("y", y12 - 10)
   .attr("width", 12)
