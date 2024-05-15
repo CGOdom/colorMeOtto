@@ -160,11 +160,11 @@ clickableSpaces
   .attr("href", "https://www.cameronsworld.net/")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/uranusgif.gif")
+  .attr("href", "Images/earth.png")
   .attr("x", x0 - 10)
   .attr("y", y0 - 10)
-  .attr("width", 30)
-  .attr("height", 30)
+  .attr("width", 18)
+  .attr("height", 18)
   .style("cursor", "pointer")
 
 clickableSpaces
@@ -172,11 +172,11 @@ clickableSpaces
   .attr("href", "HTML/form.html")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/jupitergif.gif")
+  .attr("href", "Images/jupiter.png")
   .attr("x", x1 - 10)
   .attr("y", y1 - 10)
-  .attr("width", 25)
-  .attr("height", 25)
+  .attr("width", 24)
+  .attr("height", 24)
   .style("cursor", "pointer");
 
 clickableSpaces
@@ -184,11 +184,11 @@ clickableSpaces
   .attr("href", "HTML/colormeotto.html")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/earthgif.gif")
+  .attr("href", "Images/Uranus.png")
   .attr("x", x2 - 10)
   .attr("y", y2 - 10)
-  .attr("width", 20)
-  .attr("height", 20)
+  .attr("width", 21.5)
+  .attr("height", 21.5)
   .style("cursor", "pointer");
 
 clickableSpaces
@@ -199,11 +199,11 @@ clickableSpaces
   )
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/marsgif.gif")
+  .attr("href", "Images/Mars.png")
   .attr("x", x8 - 10)
   .attr("y", y8 - 10)
-  .attr("width", 20)
-  .attr("height", 20)
+  .attr("width", 18)
+  .attr("height", 18)
   .style("cursor", "pointer");
 
 clickableSpaces
@@ -211,11 +211,11 @@ clickableSpaces
   .attr("href", "https://ottovonschirach.bandcamp.com/music")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/saturngif.gif")
+  .attr("href", "Images/Saturn.png")
   .attr("x", x9 - 10)
   .attr("y", y9 - 10)
-  .attr("width", 30)
-  .attr("height", 30)
+  .attr("width", 23.5)
+  .attr("height", 23.5)
   .style("cursor", "pointer");
 
 clickableSpaces
@@ -223,11 +223,11 @@ clickableSpaces
   .attr("href", "https://bermudatrianglefamily.bigcartel.com")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/neptunegif.gif")
+  .attr("href", "Images/Neptune.png")
   .attr("x", x10 - 10)
   .attr("y", y10 - 10)
-  .attr("width", 20)
-  .attr("height", 20)
+  .attr("width", 21.5)
+  .attr("height", 21.5)
   .style("cursor", "pointer");
 
 clickableSpaces
@@ -235,11 +235,11 @@ clickableSpaces
   .attr("href", "https://www.instagram.com/ottovonschirach/?hl=en")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/venusgif.gif")
+  .attr("href", "Images/Venus.png")
   .attr("x", x11 - 10)
   .attr("y", y11 - 10)
-  .attr("width", 20)
-  .attr("height", 20)
+  .attr("width", 15)
+  .attr("height", 15)
   .style("cursor", "pointer");
 
 clickableSpaces
@@ -247,12 +247,27 @@ clickableSpaces
   .attr("href", "https://www.youtube.com/channel/UCpAG00EDhkQ3w9VMTXiq3Pw")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/mercurygif.gif")
+  .attr("href", "Images/Mercury.png")
   .attr("x", x12 - 10)
   .attr("y", y12 - 10)
-  .attr("width", 20)
-  .attr("height", 20)
+  .attr("width", 12)
+  .attr("height", 12)
   .style("cursor", "pointer");
+
+  // Function to rotate all clickable spaces together //
+function rotateClickableSpaces() {
+  clickableSpaces
+    .transition()
+    .duration(80000) // Adjust the duration as needed
+    .ease(d3.easeLinear)
+    .attrTween("transform", function () {
+      return d3.interpolateString("rotate(0)", "rotate(360)");
+    })
+    .on("end", rotateClickableSpaces); // Loop the rotation //
+}
+
+// Call the function to rotate all clickable spaces together //
+rotateClickableSpaces();
 
 $(document).ready(function () {
   // Prevent the UFO from moving around //
