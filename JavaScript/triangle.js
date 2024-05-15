@@ -193,10 +193,7 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr(
-    "href",
-    "https://www.15questions.net/interview/fifteen-questions-otto-von-schirach/page-1/"
-  )
+  .attr("href", "https://www.15questions.net/interview/fifteen-questions-otto-von-schirach/page-1/")
   .append("image")
   .attr("class", "js-img")
   .attr("href", "Images/mars.png")
