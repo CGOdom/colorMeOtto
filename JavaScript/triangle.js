@@ -219,7 +219,7 @@ clickableSpaces
   .append("a")
   .attr("href", "https://bermudatrianglefamily.bigcartel.com")
   .append("image")
-  .attr("class", "js-img")
+  .attr("class", "png-img")
   .attr("href", "Images/neptune.png")
   .attr("x", x10 - 10)
   .attr("y", y10 - 10)
