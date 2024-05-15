@@ -244,7 +244,7 @@ clickableSpaces
   .attr("href", "https://www.youtube.com/channel/UCpAG00EDhkQ3w9VMTXiq3Pw")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/mercury.png")
+  .attr("href", "../Images/mercury.png")
   .attr("x", x12 - 10)
   .attr("y", y12 - 10)
   .attr("width", 12)
