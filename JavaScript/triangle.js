@@ -91,11 +91,6 @@ g.append("path")
   .style("stroke-width", "7px")
   .call(rotateTriangle2); // Start the rotation //
 
-// Function to randomly return either 1 or -1 //
-function randomSign() {
-  return Math.random() < 0.5 ? -1 : 1;
-}
-
 // Define the rotation animation for the segments //
 // Create the ring segments //
 var segments = 8; // number of segments in the ring //
@@ -160,7 +155,7 @@ clickableSpaces
   .attr("xlink:href", "https://www.cameronsworld.net/")
   .append("image")
   .attr("class", "js-img")
-  .attr("xlink:href", "Images/earth.png")
+  .attr("xlink:href", "https://cgodom.github.io/colorMeOtto/Images/earth.png")
   .attr("x", x0 - 10)
   .attr("y", y0 - 10)
   .attr("width", 18)
@@ -169,10 +164,10 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("xlink:href", "HTML/form.html")
+  .attr("xlink:href", "https://cgodom.github.io/colorMeOtto/HTML/form.html")
   .append("image")
   .attr("class", "js-img")
-  .attr("xlink:href", "Images/jupiter.png")
+  .attr("xlink:href", "https://cgodom.github.io/colorMeOtto/Images/jupiter.png")
   .attr("x", x1 - 10)
   .attr("y", y1 - 10)
   .attr("width", 24)
@@ -181,10 +176,10 @@ clickableSpaces
 
 clickableSpaces
   .append("a")
-  .attr("xlink:href", "HTML/colormeotto.html")
+  .attr("xlink:href", "https://cgodom.github.io/colorMeOtto/HTML/colormeotto.html")
   .append("image")
   .attr("class", "js-img")
-  .attr("xlink:href", "Images/uranus.png")
+  .attr("xlink:href", "https://cgodom.github.io/colorMeOtto/Images/uranus.png")
   .attr("x", x2 - 10)
   .attr("y", y2 - 10)
   .attr("width", 21.5)
@@ -196,7 +191,7 @@ clickableSpaces
   .attr("xlink:href", "https://www.15questions.net/interview/fifteen-questions-otto-von-schirach/page-1/")
   .append("image")
   .attr("class", "js-img")
-  .attr("xlink:href", "Images/mars.png")
+  .attr("xlink:href", "https://cgodom.github.io/colorMeOtto/Images/mars.png")
   .attr("x", x8 - 10)
   .attr("y", y8 - 10)
   .attr("width", 18)
@@ -208,7 +203,7 @@ clickableSpaces
   .attr("xlink:href", "https://ottovonschirach.bandcamp.com/music")
   .append("image")
   .attr("class", "js-img")
-  .attr("xlink:href", "Images/saturn.png")
+  .attr("xlink:href", "https://cgodom.github.io/colorMeOtto/Images/saturn.png")
   .attr("x", x9 - 10)
   .attr("y", y9 - 10)
   .attr("width", 23.5)
@@ -220,7 +215,7 @@ clickableSpaces
   .attr("xlink:href", "https://bermudatrianglefamily.bigcartel.com")
   .append("image")
   .attr("class", "js-img")
-  .attr("xlink:href", "Images/neptune.png")
+  .attr("xlink:href", "https://cgodom.github.io/colorMeOtto/Images/neptune.png")
   .attr("x", x10 - 10)
   .attr("y", y10 - 10)
   .attr("width", 21.5)
@@ -232,7 +227,7 @@ clickableSpaces
   .attr("xlink:href", "https://www.instagram.com/ottovonschirach/?hl=en")
   .append("image")
   .attr("class", "js-img")
-  .attr("xlink:href", "Images/venus.png")
+  .attr("xlink:href", "https://cgodom.github.io/colorMeOtto/Images/venus.png")
   .attr("x", x11 - 10)
   .attr("y", y11 - 10)
   .attr("width", 15)
@@ -244,7 +239,7 @@ clickableSpaces
   .attr("xlink:href", "https://www.youtube.com/channel/UCpAG00EDhkQ3w9VMTXiq3Pw")
   .append("image")
   .attr("class", "js-img")
-  .attr("xlink:href", "Images/mercury.png")
+  .attr("xlink:href", "https://cgodom.github.io/colorMeOtto/Images/mercury.png")
   .attr("x", x12 - 10)
   .attr("y", y12 - 10)
   .attr("width", 12)
