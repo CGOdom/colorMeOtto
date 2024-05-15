@@ -160,7 +160,7 @@ clickableSpaces
   .attr("href", "https://www.cameronsworld.net/")
   .append("image")
   .attr("class", "js-img")
-  .attr("href", "Images/uranus.png")
+  .attr("href", "Images/Uranus.png")
   .attr("x", x0 - 10)
   .attr("y", y0 - 10)
   .attr("width", 18)
